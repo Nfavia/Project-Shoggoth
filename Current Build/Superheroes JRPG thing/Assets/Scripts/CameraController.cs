@@ -5,71 +5,28 @@ using UnityEngine;
 public class CameraController : MonoBehaviour {
 
     public GameObject player;
+    public GameObject backgroundGO;
 
-    private Vector3 offset;
+    private float offset = 10;
 
-    //public GameObject mapTop;
-    //public GameObject mapBottom;
-    //public GameObject mapLeft;
-    //public GameObject mapRight;
-
-    //public GameObject background;
-
-
-    public float mapX = 5;
-    public float mapY = 100;
-    public float weird;
-
-    private float minX;
-    private float maxX;
-    private float minY;
-    private float maxY;
-
-    public Camera cam;
-
+    private Renderer backgroundRend;
 
     // Use this for initialization
 	void Start () {
 
-        float vertExtent = Camera.main.orthographicSize;
-
-        float horzExtent = vertExtent * Screen.width / Screen.height;
-
-        minX = horzExtent - mapX / 2;
-        maxX = mapX / 2 - horzExtent;
-        minY = vertExtent - mapY / 2 + weird;
-        maxY = mapY / 2 - vertExtent;
-
-        offset = transform.position - player.transform.position;
-
-        //background = (GameObject)GameObject.FindWithTag("Background");
-
-        //float camVertExtent = Camera.main.orthographicSize;
-        //float camHorzExtent = Camera.main.aspect * camVertExtent;
-
-        
-
-
-    }
-
-    void Update()
-    {
-        //transform.position = new Vector3(Mathf.Clamp(transform.position.x, minX,maxY), Mathf.Clamp(transform.position.y, minY, maxY), transform.position.z);
+        backgroundRend = (Renderer)backgroundGO.GetComponent("Renderer");
+       
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
 
-        float camX = Mathf.Clamp(player.transform.position.x, minX, maxX);
-        float camY = Mathf.Clamp(player.transform.position.y, minY, maxY);
+        float camX = Mathf.Clamp(player.transform.position.x, backgroundRend.bounds.min.x + offset, backgroundRend.bounds.max.x - offset);
+        //float camY = Mathf.Clamp(transform.position.y, transform.position.y, transform.position.y);
 
-        transform.position = new Vector3(camX, camY, transform.position.z);
+        transform.position = new Vector3(camX, transform.position.y, transform.position.z);
 
-        //Vector3 v3 = transform.position;
-        //v3.x = Mathf.Clamp(v3.x, minX, maxX);
-        //v3.y = Mathf.Clamp(v3.y, minY, maxY);
-        //transform.position = v3;
     }
 
 

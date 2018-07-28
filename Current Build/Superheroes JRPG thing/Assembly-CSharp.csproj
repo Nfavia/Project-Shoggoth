@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Enemy1Stats.cs" />
     <Compile Include="Assets\Scripts\EnemyMasterscript.cs" />
     <Compile Include="Assets\Scripts\GameManagerScript.cs" />
+    <Compile Include="Assets\Scripts\NPCDialogController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Referance Scripts\REF_AttackController.cs" />
