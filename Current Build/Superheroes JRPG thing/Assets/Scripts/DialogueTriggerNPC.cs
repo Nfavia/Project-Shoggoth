@@ -5,8 +5,8 @@ using UnityEngine;
 public class DialogueTriggerNPC : MonoBehaviour {
 
     private bool canTalk;
-    private bool startTalking = false;
-    private bool talking;
+    public static bool startTalking = false;
+    public static bool talking;
 
     public Dialogue dialogue;
 
@@ -55,13 +55,17 @@ public class DialogueTriggerNPC : MonoBehaviour {
     // Using the Collider2D attached to the NPC Object, it tells if it is being triggered so that you can interact/talk to the NPC
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        UIManagerScript.InteractTalk();
+
+        FindObjectOfType<UIManagerScript>().CreateTalkIcon();
         canTalk = true;
+
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
-        UIManagerScript.StopInteract();
+
+        FindObjectOfType<UIManagerScript>().DestroyTalkIcon();
         canTalk = false;
+
     }
 
 }

@@ -5,52 +5,25 @@ using UnityEngine.UI;
 
 public class UIManagerScript : MonoBehaviour {
 
-    public Canvas theCanvas;
+    [SerializeField]
+    private Canvas theCanvas;
 
-    public Image talkImg;
+    [SerializeField]
+    private Image talkImg;
 
-    public bool exists;
-    public static bool talking;
-    
-    // Use this for initialization
-	void Start ()
+    public void CreateTalkIcon()
     {
+        Image talkImgTemp = (Image)Instantiate(talkImg, theCanvas.transform);
+        talkImgTemp.transform.SetParent(theCanvas.transform);
+        talkImgTemp.name = "temp";
 
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
 
-        if (talking)
-        {
-            if (!exists)
-            {
-                Image talkImgTemp = (Image)Instantiate(talkImg, theCanvas.transform);
-                talkImgTemp.transform.SetParent(theCanvas.transform);
-                talkImgTemp.name = "temp";
-                exists = true;
-            }
-        }
-        else
-        {
-            Destroy(GameObject.Find("temp"));
-            exists = false;
-        }
-            
-	}
-
-    public static bool InteractTalk()
-    {
-        if(!talking)
-            talking = true;
-        return talking;
+        talkImgTemp.transform.SetPositionAndRotation(new Vector3(theCanvas.transform.position.x - 8.2f, theCanvas.transform.position.y - 4.5f, 0), new Quaternion(0, 180, 0, 0));
     }
 
-    public static bool StopInteract()
+    public void DestroyTalkIcon()
     {
-        if (talking)
-            talking = false;
-        return talking;
+        Destroy(GameObject.Find("temp"));
     }
+
 }

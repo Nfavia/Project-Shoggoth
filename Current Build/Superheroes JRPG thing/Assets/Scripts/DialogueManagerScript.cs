@@ -34,7 +34,7 @@ public class DialogueManagerScript : MonoBehaviour {
     public void StartDialogue(Dialogue dialogue)
     {
 
-        animator.SetBool("IsOpen", true); //
+        animator.SetBool("IsOpen", true);
 
         Debug.Log("Starting Conversation with" + dialogue.name);
 
@@ -47,8 +47,6 @@ public class DialogueManagerScript : MonoBehaviour {
             sentences.Enqueue(sentence);
         }
 
-        Debug.Log("Sentence Count is" + sentences.Count);
-
         DisplayNextSentence();
 
     }
@@ -56,7 +54,7 @@ public class DialogueManagerScript : MonoBehaviour {
     /* 
      * This method actually displays the text within the text box and when called mulitple times, will cycle through available dialogue. 
      *
-     *   **Need to find way to reset this**   
+     * 
     */
     public void DisplayNextSentence()
     {
@@ -72,9 +70,6 @@ public class DialogueManagerScript : MonoBehaviour {
 
         StartCoroutine(TypeSentence(sentence));
 
-        //dialogueText.text = sentence;
-
-        Debug.Log(sentence);
     }
 
     // Types out the entire sentence given one letter at a time
@@ -82,6 +77,8 @@ public class DialogueManagerScript : MonoBehaviour {
     {
 
         dialogueText.text = "";
+
+        yield return new WaitForSeconds(0.5f); // TEMPORARY for purposes of the test dialogue box
 
         foreach (char letter in sentence.ToCharArray())
         {
@@ -96,5 +93,7 @@ public class DialogueManagerScript : MonoBehaviour {
     {
         Debug.Log ("End of Conversation");
         animator.SetBool("IsOpen", false);
+        DialogueTriggerNPC.startTalking = false;
+        DialogueTriggerNPC.talking = false;
     }
 }

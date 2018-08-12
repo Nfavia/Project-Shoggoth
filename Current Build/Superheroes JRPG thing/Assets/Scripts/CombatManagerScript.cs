@@ -16,8 +16,8 @@ public class CombatManagerScript : MonoBehaviour
     PlayerStats plyrStats;
     Enemy1Stats enemyStats; //enemy stats will need a separate data script that will be made later
 
-    Vector2 playerPos;
-    Vector2 enemyPos;
+    //Vector2 playerPos;
+    //Vector2 enemyPos;
 
     // Canvas stuff
     public GameObject actionBar;
