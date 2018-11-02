@@ -17228,9 +17228,29 @@ If the Unity Editor setting "Auto-Update" is set to enabled, editing a script ou
         <para>The position of the vertex.</para>
       </summary>
     </member>
+    <member name="T:UnityEditor.Experimental.UIElements.BaseCompoundField`1">
+      <summary>
+        <para>Base class for the composite fields.</para>
+      </summary>
+    </member>
+    <member name="T:UnityEditor.Experimental.UIElements.BaseCompoundField`1.BaseCompoundFieldUxmlTraits">
+      <summary>
+        <para>UxmlTraits for the BaseCompoundField.</para>
+      </summary>
+    </member>
     <member name="M:UnityEditor.Experimental.UIElements.BaseCompoundField_1.BaseCompoundFieldUxmlTraits.#ctor">
       <summary>
         <para>Constructor.</para>
+      </summary>
+    </member>
+    <member name="T:UnityEditor.Experimental.UIElements.BaseValueField`1">
+      <summary>
+        <para>A base class for UIElements controls manipulating a value.</para>
+      </summary>
+    </member>
+    <member name="T:UnityEditor.Experimental.UIElements.BaseValueField`1.BaseValueFieldUxmlTraits">
+      <summary>
+        <para>UxmlTraits for the BaseValueField.</para>
       </summary>
     </member>
     <member name="M:UnityEditor.Experimental.UIElements.BaseValueField_1.BaseValueFieldUxmlTraits.#ctor">
@@ -30670,6 +30690,11 @@ See Also: PhysicsVisualizationSettings.</para>
         <para>True if Virtual Reality Support is enabled.</para>
       </returns>
     </member>
+    <member name="M:UnityEditor.PlayerSettings.GetWsaHolographicRemotingEnabled">
+      <summary>
+        <para>Returns true if Holographic Remoting is enabled.</para>
+      </summary>
+    </member>
     <member name="M:UnityEditor.PlayerSettings.HasAspectRatio(UnityEditor.AspectRatio)">
       <summary>
         <para>Returns whether or not the specified aspect ratio is enabled.</para>
@@ -31616,6 +31641,11 @@ Note: calling this function will implicitly call Application.SetStackTraceLogTyp
       </summary>
       <param name="targetGroup">The BuildTargetGroup to set the value for.</param>
       <param name="value">The value to set, true to enable, false to disable.</param>
+    </member>
+    <member name="M:UnityEditor.PlayerSettings.SetWsaHolographicRemotingEnabled">
+      <summary>
+        <para>Enables Holographic Remoting.</para>
+      </summary>
     </member>
     <member name="T:UnityEditor.PlayerSettings.SplashScreen">
       <summary>
@@ -33745,6 +33775,53 @@ See Also:</para>
         <para>Path of the scene. Should be relative to the project folder. Like: "AssetsMyScenesMyScene.unity".</para>
       </summary>
     </member>
+    <member name="T:UnityEditor.SceneView">
+      <summary>
+        <para>A scene view class.</para>
+      </summary>
+    </member>
+    <member name="P:UnityEditor.SceneView.cameraMode">
+      <summary>
+        <para>The current draw mode for the scene view camera.</para>
+      </summary>
+    </member>
+    <member name="P:UnityEditor.SceneView.in2DMode">
+      <summary>
+        <para>Is the Scene view in 2D mode?</para>
+      </summary>
+    </member>
+    <member name="?:UnityEditor.SceneView.onCameraModeChanged(System.Action`1&lt;UnityEditor.SceneView/CameraMode&gt;)">
+      <summary>
+        <para>Event that is fired when the selected camera mode changes.</para>
+      </summary>
+      <param name="value"></param>
+    </member>
+    <member name="?:UnityEditor.SceneView.onValidateCameraMode(System.Func`2&lt;UnityEditor.SceneView/CameraMode,System.Boolean&gt;)">
+      <summary>
+        <para>Event that is fired when validating camera modes for the scene view camera.</para>
+      </summary>
+      <param name="value"></param>
+    </member>
+    <member name="P:UnityEditor.SceneView.sceneViewState">
+      <summary>
+        <para>Get the current SceneViewState can be used to modify the scene view debug options.</para>
+      </summary>
+    </member>
+    <member name="M:UnityEditor.SceneView.AddCameraMode(System.String,System.String)">
+      <summary>
+        <para>Add a custom camera mode to the scene view camera mode list.</para>
+      </summary>
+      <param name="name">The name for the new mode.</param>
+      <param name="section">The section in which the new mode will be added. This can be an existing or new section.</param>
+      <returns>
+        <para>A CameraMode with the provided name and section.</para>
+      </returns>
+    </member>
+    <member name="T:UnityEditor.SceneView.CameraMode">
+      <summary>
+        <para>Describes a built in scene view mode.</para>
+      </summary>
+    </member>
     <member name="F:UnityEditor.SceneView.CameraMode.drawMode">
       <summary>
         <para>The draw mode associated with the CameraMode.</para>
@@ -33759,6 +33836,58 @@ See Also:</para>
       <summary>
         <para>The section the CameraMode belongs to.</para>
       </summary>
+    </member>
+    <member name="M:UnityEditor.SceneView.ClearUserDefinedCameraModes">
+      <summary>
+        <para>Remove all user-defined camera modes.</para>
+      </summary>
+    </member>
+    <member name="M:UnityEditor.SceneView.Frame(UnityEngine.Bounds)">
+      <summary>
+        <para>Frames the given bounds in the Scene view.</para>
+      </summary>
+      <param name="bounds">The bounds to frame in the Scene view.</param>
+      <param name="instant"></param>
+      <returns>
+        <para>True if the given bounds can be encompassed in the Scene view, otherwise false.</para>
+      </returns>
+    </member>
+    <member name="M:UnityEditor.SceneView.FrameSelected">
+      <summary>
+        <para>Frame the object selection in the scene view.</para>
+      </summary>
+      <param name="lockView">Whether the view should be locked to the selection.</param>
+      <returns>
+        <para>True if the selection can be encompassed in the Scene view, otherwise false.</para>
+      </returns>
+    </member>
+    <member name="M:UnityEditor.SceneView.FrameSelected(System.Boolean)">
+      <summary>
+        <para>Frame the object selection in the scene view.</para>
+      </summary>
+      <param name="lockView">Whether the view should be locked to the selection.</param>
+      <returns>
+        <para>True if the selection can be encompassed in the Scene view, otherwise false.</para>
+      </returns>
+    </member>
+    <member name="M:UnityEditor.SceneView.GetBuiltinCameraMode(UnityEditor.DrawCameraMode)">
+      <summary>
+        <para>Returns a CameraMode corresponding to a builtin DrawCameraMode.</para>
+      </summary>
+      <param name="drawMode">The mode to look up.</param>
+      <param name="cameraMode"></param>
+    </member>
+    <member name="M:UnityEditor.SceneView.IsCameraDrawModeEnabled(UnityEditor.SceneView/CameraMode)">
+      <summary>
+        <para>Returns true if mode is enabled in the current rendering setup, including custom validators.</para>
+      </summary>
+      <param name="mode">A CameraMode to check.</param>
+    </member>
+    <member name="M:UnityEditor.SceneView.IsCameraDrawModeEnabled">
+      <summary>
+        <para>Returns true if mode is enabled in the current rendering setup, including custom validators.</para>
+      </summary>
+      <param name="mode">A CameraMode to check.</param>
     </member>
     <member name="T:UnityEditor.ScriptableWizard">
       <summary>
@@ -37768,7 +37897,7 @@ It is required that the GameObject is at the root of its current scene.</para>
     </member>
     <member name="P:UnityEditor.VersionControl.Asset.isInCurrentProject">
       <summary>
-        <para>Returns true if the assets is in the current project.</para>
+        <para>Returns true if the asset file exists and is in the current project.</para>
       </summary>
     </member>
     <member name="P:UnityEditor.VersionControl.Asset.isMeta">

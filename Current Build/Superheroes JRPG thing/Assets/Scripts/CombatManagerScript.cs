@@ -64,8 +64,8 @@ public class CombatManagerScript : MonoBehaviour
         enemy = GameObject.FindGameObjectWithTag("Enemy");
         //allies = GameObject.FindGameObjectsWithTag("Ally");
 
-        playerPos = player.transform.position;
-        enemyPos = enemy.transform.position;
+        //playerPos = player.transform.position;
+        //enemyPos = enemy.transform.position;
 
         enemyStats = enemy.GetComponent<Enemy1Stats>();
         plyrStats = player.GetComponent<PlayerStats>();

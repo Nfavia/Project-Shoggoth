@@ -14753,6 +14753,21 @@ Only usable on Android, Windows Phone or Windows Tablets.</para>
         <para>iPhone X.</para>
       </summary>
     </member>
+    <member name="F:UnityEngine.iOS.DeviceGeneration.iPhoneXR">
+      <summary>
+        <para>iPhone XR.</para>
+      </summary>
+    </member>
+    <member name="F:UnityEngine.iOS.DeviceGeneration.iPhoneXS">
+      <summary>
+        <para>iPhone XS.</para>
+      </summary>
+    </member>
+    <member name="F:UnityEngine.iOS.DeviceGeneration.iPhoneXSMax">
+      <summary>
+        <para>iPhone XSMax.</para>
+      </summary>
+    </member>
     <member name="F:UnityEngine.iOS.DeviceGeneration.iPodTouch1Gen">
       <summary>
         <para>iPod Touch, first generation.</para>
