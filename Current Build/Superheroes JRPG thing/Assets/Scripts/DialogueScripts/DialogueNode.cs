@@ -10,15 +10,21 @@ public class DialogueNode {
 
     public List<DialogueOption> Options;
 
-    public DialogueNode()
-    {
-        Options = new List<DialogueOption>();
-    }
+    public int destinationNodeID;
 
-    public DialogueNode(string text)
+    //public DialogueNode()
+    //{
+    //    Options = new List<DialogueOption>();
+    //}
+
+    public DialogueNode(string text, int dest)
     {
         Text = text;
         Options = new List<DialogueOption>();
+        if (dest != -2)
+        {
+            this.destinationNodeID = dest;
+        }
     }
 
 }

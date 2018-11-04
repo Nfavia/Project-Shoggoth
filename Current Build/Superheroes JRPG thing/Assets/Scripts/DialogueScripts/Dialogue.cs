@@ -12,10 +12,10 @@ public class Dialogue {
     
     */
 
-    public string name;
+    public string name; 
 
-    [TextArea(3,10)]
-    public string[] sentences;
+    //[TextArea(3,10)]
+    //public string[] sentences; //may be obsolete
 
     public List<DialogueNode> Nodes;
 
@@ -26,6 +26,7 @@ public class Dialogue {
 
         Nodes.Add(node);
         node.NodeID = Nodes.IndexOf(node);
+
 
     }
 

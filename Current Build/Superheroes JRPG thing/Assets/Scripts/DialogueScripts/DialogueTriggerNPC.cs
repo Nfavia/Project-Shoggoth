@@ -7,7 +7,8 @@ public class DialogueTriggerNPC : MonoBehaviour {
 
     private bool canTalk;
     public static bool startTalking = false;
-    public static bool talking;
+    //public static bool talking;
+    private bool noOptions;
 
     public Text dialogueText;
 
@@ -22,14 +23,13 @@ public class DialogueTriggerNPC : MonoBehaviour {
 
     private Dialogue dia;
 
+    private DialogueNode tempNextNode;
+
+
     //private int TEST = 0;
 
     private void Start()
     {
-        //This is going to have to be changewd so that it is interchangeable or might have to be programmed individually, shouldnt be that bad either way
-
-
-        
 
         Overlay = GameObject.Find("DialogueOverlay");
 
@@ -61,18 +61,20 @@ public class DialogueTriggerNPC : MonoBehaviour {
                 {
                     TriggerDialogue();
                     startTalking = true;
-                    talking = true;
+                    //talking = true;
                     return;
                 }
 
             }
 
-            if (talking)
+            if (noOptions)
             {
 
                 if (Input.GetKeyDown("e"))
                 {
-                    //DialogueManagerScript.nextSentence = true;
+                    SetSelectedOption(tempNextNode.destinationNodeID);
+                    tempNextNode = null;
+                    noOptions = false;
                     return;
                 }
 
@@ -101,6 +103,7 @@ public class DialogueTriggerNPC : MonoBehaviour {
         {
             display_node(dia.Nodes[node_id]);
 
+
             selected_option = -2;
             while (selected_option == -2)
             {
@@ -124,20 +127,28 @@ public class DialogueTriggerNPC : MonoBehaviour {
         option_3.SetActive(false);
         Debug.Log("options:" + node.Options.Count);
 
-        for (int i = 0; i < node.Options.Count; i++)
+        if (node.Options.Count != 0)
         {
-            switch (i)
+            for (int i = 0; i < node.Options.Count; i++)
             {
-                case 0:
-                    set_option_button(option_1, node.Options[i]);
-                    break;
-                case 1:
-                    set_option_button(option_2, node.Options[i]);
-                    break;
-                case 2:
-                    set_option_button(option_3, node.Options[i]);
-                    break;
+                switch (i)
+                {
+                    case 0:
+                        set_option_button(option_1, node.Options[i]);
+                        break;
+                    case 1:
+                        set_option_button(option_2, node.Options[i]);
+                        break;
+                    case 2:
+                        set_option_button(option_3, node.Options[i]);
+                        break;
+                }
             }
+        }
+        else
+        {
+            tempNextNode = node;
+            noOptions = true;
         }
 
 
@@ -177,7 +188,7 @@ public class DialogueTriggerNPC : MonoBehaviour {
         //animator.SetBool("IsOpen", false);
         Overlay.SetActive(false);
         DialogueTriggerNPC.startTalking = false;
-        DialogueTriggerNPC.talking = false;
+        //DialogueTriggerNPC.talking = false;
     }
 
     // Using the Collider2D attached to the NPC Object, it tells if it is being triggered so that you can interact/talk to the NPC

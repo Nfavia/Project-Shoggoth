@@ -9,6 +9,11 @@ public class TestNPCData : MonoBehaviour {
      * Sooo The purpose of this script is going to be to hold various tytpes of data for a specific character.
      * This could include Dialogue, Character portait Prefabs, etc.
      * We'll see if this works for anything
+     * 
+     * NODE DEST GUIDE:
+     * -2 = Options exist for this node
+     * -1 = Exit node
+     * any other number = the destination Node when there are no options
      */
 
 
@@ -16,46 +21,32 @@ public class TestNPCData : MonoBehaviour {
 
     public static Dialogue dia;
 
+    [SerializeField]
+    private static int npcDialogueState;
+
     public static void DialogueTest()
     {
-        Dialogue dialogue = new Dialogue();
+        if (npcDialogueState == 0)
+        {
+            Dialogue dialogue = new Dialogue();
 
-        DialogueNode node1 = new DialogueNode("Hello. How are you?");
-        DialogueNode node2 = new DialogueNode("Well that's nice!");
-        DialogueNode node3 = new DialogueNode("Sorry to hear it.");
+            DialogueNode node0 = new DialogueNode("Hello. How are you?", -2);
+            DialogueNode node1 = new DialogueNode("Well that's nice!", 3);
+            DialogueNode node2 = new DialogueNode("Sorry to hear it.", 3);
+            DialogueNode node3 = new DialogueNode("Hope you have a nice day!", -1);
 
-        dialogue.AddNode(node1);
-        dialogue.AddNode(node2);
-        dialogue.AddNode(node3);
+            dialogue.AddNode(node0);
+            dialogue.AddNode(node1);
+            dialogue.AddNode(node3);
+            dialogue.AddNode(node3);
 
-        //dialogue.AddOption("Exit", node2, null);
-        //dialogue.AddOption("Exit", node3, null);
+            dialogue.AddOption("I'm doing good!", node0, node1);
+            dialogue.AddOption("I'm horrible...", node0, node2);
 
-        dialogue.AddOption("I'm doing good!", node1, node2);
-        dialogue.AddOption("I'm horrible...", node1, node3);
-
-        dia = dialogue;
+            dia = dialogue;
+        }
     }
 
-    public static void DialogueTest2()
-    {
-        Dialogue dialogue = new Dialogue();
-
-        DialogueNode node1 = new DialogueNode("AAAAAAAAAAAAAA");
-        DialogueNode node2 = new DialogueNode("Well that's nice!");
-        DialogueNode node3 = new DialogueNode("Sorry to hear it.");
-   
-        dialogue.AddNode(node1);
-        dialogue.AddNode(node2);
-        dialogue.AddNode(node3);
-
-        dialogue.AddOption("Exit", node2, null);
-        dialogue.AddOption("Exit", node3, null);
-
-        dialogue.AddOption("I'm doing good!", node1, node2);
-        dialogue.AddOption("I'm horrible...", node1, node3);
-
-        dia = dialogue;
-    }
+    
 
 }
