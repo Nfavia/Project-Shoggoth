@@ -12,15 +12,13 @@ public class DialogueNode {
 
     public int destinationNodeID;
 
-    //public DialogueNode()
-    //{
-    //    Options = new List<DialogueOption>();
-    //}
+    public int stateChangeValue;
 
-    public DialogueNode(string text, int dest)
+    public DialogueNode(string text, int dest, int stateChng)
     {
         Text = text;
         Options = new List<DialogueOption>();
+        stateChangeValue = stateChng;
         if (dest != -2)
         {
             this.destinationNodeID = dest;

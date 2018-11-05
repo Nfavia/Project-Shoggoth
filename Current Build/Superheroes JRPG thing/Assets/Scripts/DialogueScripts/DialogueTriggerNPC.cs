@@ -7,69 +7,53 @@ public class DialogueTriggerNPC : MonoBehaviour {
 
     private bool canTalk;
     public static bool startTalking = false;
-    //public static bool talking;
     private bool noOptions;
 
     public Text dialogueText;
 
+    [SerializeField]
     private GameObject option_1;
+    [SerializeField]
     private GameObject option_2;
+    [SerializeField]
     private GameObject option_3;
+    [SerializeField]
     private GameObject exit;
 
     private int selected_option = -2;
 
-    public GameObject Overlay;
+    [SerializeField]
+    private GameObject Overlay;
 
     private Dialogue dia;
 
     private DialogueNode tempNextNode;
 
-
-    //private int TEST = 0;
-
     private void Start()
     {
-
-        Overlay = GameObject.Find("DialogueOverlay");
-
-        option_1 = GameObject.Find("Option1_btn");
-        option_2 = GameObject.Find("Option2_btn");
-        option_3 = GameObject.Find("Option3_btn");
-        exit = GameObject.Find("Exit_Btn");
-
         exit.GetComponent<Button>().onClick.AddListener(delegate { SetSelectedOption(-1); } );
 
         Overlay.SetActive(false);
-
-        Debug.Log(this.name);
-
     }
 
     // This Update is checking if the player tries to interact with an NPC should that be possible. Yes it's a lot of if statements, get over it
     public void Update()
     {
 
-
         if (canTalk)
         {
-
             if (!startTalking)
             {
-
                 if (Input.GetKeyDown("e"))
                 {
                     TriggerDialogue();
                     startTalking = true;
-                    //talking = true;
                     return;
                 }
-
             }
 
             if (noOptions)
             {
-
                 if (Input.GetKeyDown("e"))
                 {
                     SetSelectedOption(tempNextNode.destinationNodeID);
@@ -77,7 +61,6 @@ public class DialogueTriggerNPC : MonoBehaviour {
                     noOptions = false;
                     return;
                 }
-
             }
 
         }
@@ -89,12 +72,13 @@ public class DialogueTriggerNPC : MonoBehaviour {
     {
         DialogueManagerScript.DialogueMiddleman(this.gameObject);
         dia = DialogueManagerScript.dia;
-
+     
         StartCoroutine(DisplayDialogue());
     }
 
     public IEnumerator DisplayDialogue()
     {
+
         Overlay.SetActive(true);
 
         int node_id = 0;
@@ -102,7 +86,6 @@ public class DialogueTriggerNPC : MonoBehaviour {
         while (node_id != -1)
         {
             display_node(dia.Nodes[node_id]);
-
 
             selected_option = -2;
             while (selected_option == -2)
@@ -115,7 +98,6 @@ public class DialogueTriggerNPC : MonoBehaviour {
 
             node_id = selected_option;
         }
-
     }
 
     private void display_node(DialogueNode node)
@@ -126,6 +108,11 @@ public class DialogueTriggerNPC : MonoBehaviour {
         option_2.SetActive(false);
         option_3.SetActive(false);
         Debug.Log("options:" + node.Options.Count);
+
+        if (node.stateChangeValue != -1)
+        {
+            DialogueManagerScript.DialogueStateChangeManager(this.gameObject, node.stateChangeValue);
+        }
 
         if (node.Options.Count != 0)
         {
@@ -150,8 +137,6 @@ public class DialogueTriggerNPC : MonoBehaviour {
             tempNextNode = node;
             noOptions = true;
         }
-
-
     }
 
     private void set_option_button(GameObject button, DialogueOption opt)
@@ -169,42 +154,32 @@ public class DialogueTriggerNPC : MonoBehaviour {
     // Types out the entire sentence given one letter at a time
     IEnumerator TypeSentence(string sentence)
     {
-
         dialogueText.text = "";
-
-        //yield return new WaitForSeconds(0.5f); // TEMPORARY for purposes of the test dialogue box
 
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
             yield return null;
         }
-
     }
 
     void EndDialogue()
     {
         Debug.Log("End of Conversation");
-        //animator.SetBool("IsOpen", false);
         Overlay.SetActive(false);
-        DialogueTriggerNPC.startTalking = false;
-        //DialogueTriggerNPC.talking = false;
+        startTalking = false;
     }
 
     // Using the Collider2D attached to the NPC Object, it tells if it is being triggered so that you can interact/talk to the NPC
     public void OnTriggerEnter2D(Collider2D collision)
     {
-
         FindObjectOfType<UIManagerScript>().CreateTalkIcon();
         canTalk = true;
-
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
-
         FindObjectOfType<UIManagerScript>().DestroyTalkIcon();
         canTalk = false;
-
     }
 
 }

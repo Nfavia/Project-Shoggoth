@@ -7,9 +7,11 @@ public class UIManagerScript : MonoBehaviour {
 
     [SerializeField]
     private Canvas theCanvas;
+    private GameObject portraitLocation;
 
     [SerializeField]
     private Image talkImg;
+    private Image characterPortrait;
 
     public void CreateTalkIcon()
     {
@@ -24,6 +26,16 @@ public class UIManagerScript : MonoBehaviour {
     public void DestroyTalkIcon()
     {
         Destroy(GameObject.Find("temp"));
+    }
+
+    public void CreateCharacterPortrait(Image character)
+    {
+        if (GameObject.Find("CharacterPortrait"))
+            Destroy(GameObject.Find("CharacterPortrait"));
+
+        Image currentCharacter = (Image)Instantiate(character, portraitLocation.transform);
+        currentCharacter.transform.SetParent(portraitLocation.transform);
+        currentCharacter.name = "CharacterPortrait";
     }
 
 }

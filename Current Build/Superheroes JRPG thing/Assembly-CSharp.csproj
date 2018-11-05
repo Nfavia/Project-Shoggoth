@@ -74,12 +74,13 @@
     <Compile Include="Assets\Scripts\Enemy1Stats.cs" />
     <Compile Include="Assets\Scripts\EnemyMasterscript.cs" />
     <Compile Include="Assets\Scripts\GameManagerScript.cs" />
+    <Compile Include="Assets\Scripts\NPCDataScripts\TestNPC2Data.cs" />
+    <Compile Include="Assets\Scripts\NPCDataScripts\TestNPCData.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Referance Scripts\REF_AttackController.cs" />
     <Compile Include="Assets\Scripts\Referance Scripts\REF_EnemyController.cs" />
     <Compile Include="Assets\Scripts\Referance Scripts\REF_PlayerController.cs" />
-    <Compile Include="Assets\Scripts\TestNPCData.cs" />
     <Compile Include="Assets\Scripts\UIManagerScript.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>F:/_Moonbeast Studios/Github/Project-Shoggoth/Current Build/Superheroes JRPG thing/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
