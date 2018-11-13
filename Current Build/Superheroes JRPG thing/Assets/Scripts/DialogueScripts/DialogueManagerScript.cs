@@ -8,12 +8,11 @@ public class DialogueManagerScript : MonoBehaviour {
     public static Dialogue dia;
 
 
-    // 3 things needed for the middleman: CREATE PORTRAIT / RUN DIALOUGE / SET DIALOGUE AS DIA
+    // 3 things needed for the middleman: RUN DIALOUGE / SET DIALOGUE AS DIA
     public static void DialogueMiddleman(GameObject character)
     {
         if (character.GetComponent<TestNPCData>() != null)
         {
-            //FindObjectOfType<UIManagerScript>().CreateCharacterPortrait();
             TestNPCData.DialogueTest();
             dia = TestNPCData.dia;
         }
@@ -38,6 +37,16 @@ public class DialogueManagerScript : MonoBehaviour {
         }
         else
             Debug.LogError("State Manager isnt working");
+    }
+
+    public static void SetDialoguePortrait(GameObject charactrer, int portraitID)
+    {
+        if (charactrer.GetComponent<TestNPCData>() != null)
+            FindObjectOfType<TestNPCData>().SetDialoguePortrait(portraitID);
+        else if (charactrer.GetComponent<TestNPC2Data>() != null)
+            FindObjectOfType<TestNPC2Data>().SetDialoguePortrait(portraitID);
+        else
+            Debug.LogError("Portrait isnt being set");
     }
 
 }

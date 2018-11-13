@@ -5,19 +5,16 @@ using UnityEngine.UI;
 
 public class TestNPC2Data : MonoBehaviour {
 
-    /*
-     * Sooo The purpose of this script is going to be to hold various tytpes of data for a specific character.
-     * This could include Dialogue, Character portait Prefabs, etc.
-     * We'll see if this works for anything
-     * 
-     * NODE DEST GUIDE:
-     * -2 = Options exist for this node
-     * -1 = Exit node
-     * any other number = the destination Node when there are no options
-     */
-
-
-    public Image characterPortrait;
+    [SerializeField]
+    private Image portraitIdle; // Portrait ID: 1
+    [SerializeField]
+    private Image portraitBlank; // Portrait ID: 2
+    [SerializeField]
+    private Image portraitHappy; // Portrait ID: 3
+    [SerializeField]
+    private Image portraitSad; // Portrait ID: 4
+    [SerializeField]
+    private Image portraitAngry; // Portrait ID: 5
 
     public static Dialogue dia;
 
@@ -28,6 +25,19 @@ public class TestNPC2Data : MonoBehaviour {
     {
         npcDialogueState = value;
     }
+    public void SetDialoguePortrait(int portraitID)
+    {
+        if (portraitID == 1)
+            FindObjectOfType<UIManagerScript>().CreateCharacterPortrait(portraitIdle);
+        else if (portraitID == 2)
+            FindObjectOfType<UIManagerScript>().CreateCharacterPortrait(portraitBlank);
+        else if (portraitID == 3)
+            FindObjectOfType<UIManagerScript>().CreateCharacterPortrait(portraitHappy);
+        else if (portraitID == 4)
+            FindObjectOfType<UIManagerScript>().CreateCharacterPortrait(portraitSad);
+        else if (portraitID == 5)
+            FindObjectOfType<UIManagerScript>().CreateCharacterPortrait(portraitAngry);
+    }
 
     public static void DialogueTest()
     {
@@ -35,13 +45,13 @@ public class TestNPC2Data : MonoBehaviour {
         {
             Dialogue dialogue = new Dialogue();
 
-            DialogueNode node0 = new DialogueNode("Psst, ya got a dollar?", -2, -1);
+            DialogueNode node0 = new DialogueNode("Psst, ya got a dollar?", -2, -1, 1);
 
-            DialogueNode node1 = new DialogueNode("Can I have a dollar?", -2, -1);
-            DialogueNode node2 = new DialogueNode("Well, nevermind then.", -1, -1);
+            DialogueNode node1 = new DialogueNode("Can I have a dollar?", -2, -1, 1);
+            DialogueNode node2 = new DialogueNode("Well, nevermind then.", -1, -1, 5);
 
-            DialogueNode node3 = new DialogueNode("Awesome! Thanks!", -1, -1);
-            DialogueNode node4 = new DialogueNode("Aww...", -1, -1);
+            DialogueNode node3 = new DialogueNode("Awesome! Thanks!", -1, -1, 3);
+            DialogueNode node4 = new DialogueNode("Aww...", -1, -1, 4);
 
             dialogue.AddNode(node0);
             dialogue.AddNode(node1);

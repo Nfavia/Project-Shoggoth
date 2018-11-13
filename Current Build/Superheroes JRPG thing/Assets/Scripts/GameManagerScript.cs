@@ -11,29 +11,36 @@ public class GameManagerScript : MonoBehaviour {
     [SerializeField]
     public static bool enterCombat = false;
     public static bool exitCombat = false;
+    public static bool canMove;
+    public static bool inConversation;
 
     // Use this for initialization
     void Start () {
-        
+
+        canMove = true; //This will be removed once cutscenes and such are added so that it can check if there is a cutscene or immediate dialogue
 
     }
 	
 	// Update is called once per frame
 	void Update () {
-
-
         //If entercombat is true the combat scene will load.
         if (enterCombat)
         {
             SceneManager.LoadScene("CombatTesting");
+            canMove = false;
             enterCombat = false;
         }
         if (exitCombat)
         {
             SceneManager.LoadScene("Testing");
             exitCombat = false;
+            canMove = true;
         }
 
+        if (inConversation)
+            canMove = false;
+        if (!inConversation)
+            canMove = true;
     }
 
     public void ExitCombat()

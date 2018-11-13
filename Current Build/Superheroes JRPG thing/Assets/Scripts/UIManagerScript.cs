@@ -7,6 +7,7 @@ public class UIManagerScript : MonoBehaviour {
 
     [SerializeField]
     private Canvas theCanvas;
+    [SerializeField]
     private GameObject portraitLocation;
 
     [SerializeField]
@@ -19,7 +20,6 @@ public class UIManagerScript : MonoBehaviour {
         talkImgTemp.transform.SetParent(theCanvas.transform);
         talkImgTemp.name = "temp";
 
-
         talkImgTemp.transform.SetPositionAndRotation(new Vector3(theCanvas.transform.position.x - 8.2f, theCanvas.transform.position.y - 4.5f, 0), new Quaternion(0, 180, 0, 0));
     }
 
@@ -30,12 +30,10 @@ public class UIManagerScript : MonoBehaviour {
 
     public void CreateCharacterPortrait(Image character)
     {
-        if (GameObject.Find("CharacterPortrait"))
-            Destroy(GameObject.Find("CharacterPortrait"));
-
         Image currentCharacter = (Image)Instantiate(character, portraitLocation.transform);
         currentCharacter.transform.SetParent(portraitLocation.transform);
         currentCharacter.name = "CharacterPortrait";
     }
+
 
 }
