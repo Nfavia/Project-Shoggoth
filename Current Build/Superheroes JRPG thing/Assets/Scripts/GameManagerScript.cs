@@ -8,17 +8,20 @@ public class GameManagerScript : MonoBehaviour {
 
     /*This Script will probably be used for changing scenes for the most part. The Game Manager Object should be in evey scene*/
 
-    [SerializeField]
     public static bool enterCombat = false;
     public static bool exitCombat = false;
     public static bool canMove;
     public static bool inConversation;
+
+    [SerializeField]
+    private GameObject theCanvas;
 
     // Use this for initialization
     void Start () {
 
         canMove = true; //This will be removed once cutscenes and such are added so that it can check if there is a cutscene or immediate dialogue
 
+        theCanvas.SetActive(true);
     }
 	
 	// Update is called once per frame

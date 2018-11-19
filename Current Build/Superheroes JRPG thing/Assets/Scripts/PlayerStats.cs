@@ -16,7 +16,7 @@ public class PlayerStats : MonoBehaviour {
     int guard = 10;
 
     //Attack stuffz
-    public int attackMod = 10; //The modifier for the strength. Attribute stats may look better as smaller numbers so this changes it to an attack worthy number. 
+    public int attackMod = 10; //The modifier for the strength. Attribute stats may look better as smaller numbers so this changes it to an attack worthy number. CHANGE TO BASE ATTACK MOD?
     int maxDmg;
     int minDmg;
     public int attackDmg;
@@ -38,7 +38,7 @@ public class PlayerStats : MonoBehaviour {
 	void Start ()
     {
 
-        AttackCalc();
+        //AttackCalc();
 
 	}
 	

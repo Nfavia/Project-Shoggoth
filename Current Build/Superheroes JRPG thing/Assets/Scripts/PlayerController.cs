@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour {
     private Transform playerFeet;
 
     private GameObject mainCamera;
+
+    [SerializeField]
+    private Animator animator;
   
     void Awake()
     {
@@ -27,12 +30,64 @@ public class PlayerController : MonoBehaviour {
 
     void Update()
     {
+        //Debug.Log(Input.GetAxisRaw("Horizontal"));
+
+        if (Input.GetAxisRaw("Horizontal") < 0 && rb2d.velocity.magnitude > 0)
+        {
+            animator.SetBool("Left", true);
+            animator.SetBool("Right", false);
+            if (animator.GetBool("Forward") == true || animator.GetBool("Back") == true)
+            {
+                animator.SetBool("Forward", false);
+                animator.SetBool("Back", false);
+            }
+        }
+        else if (Input.GetAxisRaw("Horizontal") > 0 && rb2d.velocity.magnitude > 0)
+        {
+            animator.SetBool("Right", true);
+            animator.SetBool("Left", false);
+            if (animator.GetBool("Forward") == true || animator.GetBool("Back") == true)
+            {
+                animator.SetBool("Forward", false);
+                animator.SetBool("Back", false);
+            }     
+        }
+        else if (Input.GetAxisRaw("Vertical") == -1 && Input.GetAxisRaw("Horizontal") == 0 && rb2d.velocity.magnitude > 0)
+        {
+            animator.SetBool("Forward", true);
+            animator.SetBool("Back", false);
+            if (Input.GetAxisRaw("Horizontal") == 0)
+            {
+                animator.SetBool("Right", false);
+                animator.SetBool("Left", false);
+            }
+        }
+        else if (Input.GetAxisRaw("Vertical") == 1 && Input.GetAxisRaw("Horizontal") == 0 && rb2d.velocity.magnitude > 0)
+        {
+            animator.SetBool("Back", true);
+            animator.SetBool("Forward", false);
+            if (Input.GetAxisRaw("Horizontal") == 0)
+            {
+                animator.SetBool("Right", false);
+                animator.SetBool("Left", false);
+            }
+        }
+        else
+        {
+            animator.SetBool("Back", false);
+            animator.SetBool("Right", false);
+            animator.SetBool("Forward", false);
+            animator.SetBool("Left", false);
+        }          
+
         // The y positions of the players feet and Shrink Anchor (The game object whose distance from 0 changes the scaling rate)
         float playerPos = playerFeet.position.y;
         float topPos = shrinkAnchor.position.y;
 
+        float modifier = defaultScale * -1; //The modifier needs to be the negative of whatever the default scale is, otherwise things get fucky
+
         // Sets the players scale depending on how close to the top the player is.
-        transform.localScale = new Vector2(playerPos/topPos * -10 + defaultScale, playerPos / topPos * -10 + defaultScale);
+        transform.localScale = new Vector2(playerPos/topPos * modifier + defaultScale, playerPos / topPos * modifier + defaultScale);
     }
 
     void FixedUpdate()
