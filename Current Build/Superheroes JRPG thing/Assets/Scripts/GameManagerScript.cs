@@ -16,12 +16,15 @@ public class GameManagerScript : MonoBehaviour {
     [SerializeField]
     private GameObject theCanvas;
 
-    // Use this for initialization
-    void Start () {
-
-        canMove = true; //This will be removed once cutscenes and such are added so that it can check if there is a cutscene or immediate dialogue
-
+    private void Awake()
+    {
         theCanvas.SetActive(true);
+    }
+
+    // Use this for initialization
+    void Start ()
+    {
+        canMove = true; //This will be removed once cutscenes and such are added so that it can check if there is a cutscene or immediate dialogue
     }
 	
 	// Update is called once per frame

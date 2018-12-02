@@ -25,6 +25,8 @@ public class DialogueTriggerNPC : MonoBehaviour {
 
     [SerializeField]
     private GameObject Overlay;
+    [SerializeField]
+    private Canvas theCanvas;
 
     private Dialogue dia;
 

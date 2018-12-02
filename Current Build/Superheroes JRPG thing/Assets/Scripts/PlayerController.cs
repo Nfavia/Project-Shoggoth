@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour {
 
     void Update()
     {
-        //Debug.Log(Input.GetAxisRaw("Horizontal"));
+        animator.SetFloat("Speed", rb2d.velocity.magnitude);
 
         if (Input.GetAxisRaw("Horizontal") < 0 && rb2d.velocity.magnitude > 0)
         {
@@ -72,13 +72,13 @@ public class PlayerController : MonoBehaviour {
                 animator.SetBool("Left", false);
             }
         }
-        else
-        {
-            animator.SetBool("Back", false);
-            animator.SetBool("Right", false);
-            animator.SetBool("Forward", false);
-            animator.SetBool("Left", false);
-        }          
+        //else
+        //{
+        //    animator.SetBool("Back", false);
+        //    animator.SetBool("Right", false);
+        //    animator.SetBool("Forward", false);
+        //    animator.SetBool("Left", false);
+        //}          
 
         // The y positions of the players feet and Shrink Anchor (The game object whose distance from 0 changes the scaling rate)
         float playerPos = playerFeet.position.y;
