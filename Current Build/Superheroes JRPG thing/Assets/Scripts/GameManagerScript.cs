@@ -15,10 +15,13 @@ public class GameManagerScript : MonoBehaviour {
 
     [SerializeField]
     private GameObject theCanvas;
+    [SerializeField]
+    private GameObject dialogueOverlay;
 
     private void Awake()
     {
         theCanvas.SetActive(true);
+        dialogueOverlay.SetActive(false);
     }
 
     // Use this for initialization

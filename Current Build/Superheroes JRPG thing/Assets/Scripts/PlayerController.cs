@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
     private float speed;
     [SerializeField]
-    private float defaultScale = 10;
+    private float defaultScale;
     
     [SerializeField]
     private Transform shrinkAnchor;
