@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour {
     private float defaultScale;
     
     [SerializeField]
-    private Transform shrinkAnchor;
+    private GameObject shrinkAnchor;
     [SerializeField]
     private Transform playerFeet;
 
@@ -21,15 +21,28 @@ public class PlayerController : MonoBehaviour {
 
     [SerializeField]
     private Animator animator;
+
+    private static PlayerController playerInstance;
   
     void Awake()
     {
         // Assigns components to variables
         rb2d = GetComponent<Rigidbody2D>();
+
+        DontDestroyOnLoad(this);
+        if (playerInstance == null)
+            playerInstance = this;
+        else
+            Destroy(gameObject);
+        if (shrinkAnchor == null)
+            shrinkAnchor = GameObject.Find("ShrinkAnchor");
     }
 
     void Update()
     {
+        //if (shrinkAnchor == null)
+        //    shrinkAnchor = GameObject.Find("ShrinkAnchor");
+
         animator.SetFloat("Speed", rb2d.velocity.magnitude);
 
         if (Input.GetAxisRaw("Horizontal") < 0 && rb2d.velocity.magnitude > 0)
@@ -82,7 +95,7 @@ public class PlayerController : MonoBehaviour {
 
         // The y positions of the players feet and Shrink Anchor (The game object whose distance from 0 changes the scaling rate)
         float playerPos = playerFeet.position.y;
-        float topPos = shrinkAnchor.position.y;
+        float topPos = shrinkAnchor.transform.position.y;
 
         float modifier = defaultScale * -1; //The modifier needs to be the negative of whatever the default scale is, otherwise things get fucky
 

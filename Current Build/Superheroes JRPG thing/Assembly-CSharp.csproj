@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\CanvasScript.cs" />
     <Compile Include="Assets\Scripts\CombatInitiatorScript.cs" />
     <Compile Include="Assets\Scripts\CombatManagerScript.cs" />
     <Compile Include="Assets\Scripts\DebugExitBtn.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Assets\Scripts\Enemy1Stats.cs" />
     <Compile Include="Assets\Scripts\EnemyMasterscript.cs" />
     <Compile Include="Assets\Scripts\GameManagerScript.cs" />
+    <Compile Include="Assets\Scripts\MapTransition.cs" />
     <Compile Include="Assets\Scripts\NPCDataScripts\TestNPC2Data.cs" />
     <Compile Include="Assets\Scripts\NPCDataScripts\TestNPCData.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />

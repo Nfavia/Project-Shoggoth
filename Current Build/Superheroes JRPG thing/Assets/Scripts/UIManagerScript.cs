@@ -14,6 +14,16 @@ public class UIManagerScript : MonoBehaviour {
     private Image talkImg;
     private Image characterPortrait;
 
+    private static UIManagerScript UIManagerInstance;
+
+    private void Awake()
+    {
+        if (UIManagerInstance == null)
+            UIManagerInstance = this;
+        else
+            Destroy(gameObject);
+    }
+
     public void CreateTalkIcon()
     {
         Image talkImgTemp = (Image)Instantiate(talkImg, theCanvas.transform);

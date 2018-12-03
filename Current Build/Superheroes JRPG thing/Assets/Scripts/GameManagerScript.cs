@@ -18,20 +18,35 @@ public class GameManagerScript : MonoBehaviour {
     [SerializeField]
     private GameObject dialogueOverlay;
 
+    private static bool loadScene;
+
+    private static GameObject GameManagerInstance;
+
     private void Awake()
     {
         theCanvas.SetActive(true);
-        dialogueOverlay.SetActive(false);
+        if (GameManagerInstance == null)
+        {
+            GameManagerInstance = this.gameObject;
+            ThingsToNotDestroyOnLoad();
+        }
+        else
+            Destroy(gameObject);
     }
 
     // Use this for initialization
     void Start ()
     {
         canMove = true; //This will be removed once cutscenes and such are added so that it can check if there is a cutscene or immediate dialogue
+        dialogueOverlay.SetActive(false);
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
+
+        if (loadScene)
+            dialogueOverlay.SetActive(true);
+
         //If entercombat is true the combat scene will load.
         if (enterCombat)
         {
@@ -52,8 +67,33 @@ public class GameManagerScript : MonoBehaviour {
             canMove = true;
     }
 
+    private void ThingsToNotDestroyOnLoad()
+    {
+        GameObject UIManager = GameObject.Find("UIManager");
+        GameObject dialogueManager = GameObject.Find("DialogueManager");
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
+
+        DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(UIManager);
+        DontDestroyOnLoad(player);
+        DontDestroyOnLoad(dialogueManager);
+        DontDestroyOnLoad(theCanvas);
+        DontDestroyOnLoad(camera);
+    }
+
     public void ExitCombat()
     {
         exitCombat = true;
     }
+
+    public static void TransitionScene(string sceneName)
+    {
+        //DontDestroyOnLoad(player);
+        SceneManager.LoadScene(sceneName);
+        //SceneManager.MoveGameObjectToScene(player, SceneManager.GetActiveScene());
+        loadScene = true;
+    }
+
+
 }

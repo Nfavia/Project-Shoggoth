@@ -7,6 +7,15 @@ public class DialogueManagerScript : MonoBehaviour {
 
     public static Dialogue dia;
 
+    private static DialogueManagerScript DialogueManagerInstance;
+
+    private void Awake()
+    {
+        if (DialogueManagerInstance == null)
+            DialogueManagerInstance = this;
+        else
+            Destroy(gameObject);
+    }
 
     // 3 things needed for the middleman: RUN DIALOUGE / SET DIALOGUE AS DIA
     public static void DialogueMiddleman(GameObject character)

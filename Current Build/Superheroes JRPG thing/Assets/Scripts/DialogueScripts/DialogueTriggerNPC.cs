@@ -32,12 +32,33 @@ public class DialogueTriggerNPC : MonoBehaviour {
 
     private DialogueNode tempNextNode;
 
+    private void Awake()
+    {
+        
+    }
+
     private void Start()
     {
         exit.GetComponent<Button>().onClick.AddListener(delegate { SetSelectedOption(-1); } );
+        
 
+
+    }
+
+    private void Reset()
+    {
+        if (Overlay == null)
+        {
+            Overlay = GameObject.FindGameObjectWithTag("DialogueOverlay");
+            Debug.Log("It found it");
+            //Overlay.SetActive(false);
+        }
         Overlay.SetActive(false);
+    }
 
+    private void OnLevelWasLoaded(int level)
+    {
+        
     }
 
     // This Update is checking if the player tries to interact with an NPC should that be possible. Yes it's a lot of if statements, get over it
