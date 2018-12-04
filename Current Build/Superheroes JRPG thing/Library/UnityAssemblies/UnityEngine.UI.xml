@@ -210,7 +210,7 @@
     </member>
     <member name="M:UnityEngine.EventSystems.BaseInputModule.HandlePointerExitAndEnter(UnityEngine.EventSystems.PointerEventData,UnityEngine.GameObject)">
       <summary>
-        <para>Handle sending enter and exit events when a new enter targer is found.</para>
+        <para>Handle sending enter and exit events when a new enter target is found.</para>
       </summary>
       <param name="currentPointerData"></param>
       <param name="newEnterTarget"></param>
@@ -341,7 +341,7 @@
     </member>
     <member name="P:UnityEngine.EventSystems.EventSystem.isFocused">
       <summary>
-        <para>Flag to say weather the EventSystem thinks it should be paused or not based upon focused state.</para>
+        <para>Flag to say whether the EventSystem thinks it should be paused or not based upon focused state.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.EventSystems.EventSystem.pixelDragThreshold">
@@ -1643,7 +1643,7 @@
     </member>
     <member name="M:UnityEngine.EventSystems.UIBehaviour.OnRectTransformDimensionsChange">
       <summary>
-        <para>This callback is called if an associated RectTransform has its dimensions changed. The call is also made to all child rect transforms, even if the child transform itself doesn't change - as it could have, depending on its anchoring.</para>
+        <para>This callback is called if an associated RectTransform has its dimensions changed.</para>
       </summary>
     </member>
     <member name="M:UnityEngine.EventSystems.UIBehaviour.OnTransformParentChanged">
@@ -1790,7 +1790,7 @@
     </member>
     <member name="P:UnityEngine.UI.Button.onClick">
       <summary>
-        <para>UnityEvent that is triggered when the button is pressed.</para>
+        <para>UnityEvent that is triggered when the Button is pressed.</para>
       </summary>
     </member>
     <member name="T:UnityEngine.UI.Button.ButtonClickedEvent">
@@ -3784,9 +3784,7 @@ Used if the native representation has been destroyed.</para>
     </member>
     <member name="P:UnityEngine.UI.InputField.placeholder">
       <summary>
-        <para>This is an optional ‘empty’ graphic to show that the InputField text field is empty. Note that this ‘empty' graphic still displays even when the InputField is selected (that is; when there is focus on it).
-
-A placeholder graphic can be used to show subtle hints or make it more obvious that the control is an InputField.</para>
+        <para>This is an optional ‘empty’ graphic to show that the InputField text field is empty.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.UI.InputField.readOnly">

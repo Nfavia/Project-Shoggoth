@@ -8,7 +8,7 @@
 			<summary>Arrays allow you to store multiple objects in a single variable.</summary>
 		</member>
 		<member name="P:UnityScript.Lang.Array.length">
-			<summary>The length property of the array that returns or sets the number of elements in array.</summary>
+			<summary>The length property that returns or sets the number of elements in the Array.</summary>
 		</member>
 		<member name="M:UnityScript.Lang.Array.clear()">
 			<summary>Empties the array. The length of the array will be zero.</summary>

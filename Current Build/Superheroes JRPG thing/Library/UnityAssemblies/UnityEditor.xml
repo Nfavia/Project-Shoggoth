@@ -2205,7 +2205,7 @@ Transitions with exit times greater than one will be evaluated only once, so the
     </member>
     <member name="T:UnityEditor.ArrayUtility">
       <summary>
-        <para>Helpers for builtin arrays ...</para>
+        <para>Helpers for builtin arrays.</para>
       </summary>
     </member>
     <member name="M:UnityEditor.ArrayUtility.Add(T[]&amp;,T)">
@@ -2456,7 +2456,7 @@ Transitions with exit times greater than one will be evaluated only once, so the
       </summary>
       <param name="path">Filesystem path for the asset.</param>
       <returns>
-        <para>GUID</para>
+        <para>GUID.</para>
       </returns>
     </member>
     <member name="M:UnityEditor.AssetDatabase.ClearLabels(UnityEngine.Object)">
@@ -2559,8 +2559,7 @@ Transitions with exit times greater than one will be evaluated only once, so the
       <summary>
         <para>Search the asset database using the search filter string.</para>
       </summary>
-      <param name="filter">The filter string can contain search data.  See below for
-        details about this string.</param>
+      <param name="filter">The filter string can contain search data.  See below for details about this string.</param>
       <param name="searchInFolders">The folders where the search will start.</param>
       <returns>
         <para>Array of matching asset. Note that GUIDs will be returned.</para>
@@ -2570,8 +2569,7 @@ Transitions with exit times greater than one will be evaluated only once, so the
       <summary>
         <para>Search the asset database using the search filter string.</para>
       </summary>
-      <param name="filter">The filter string can contain search data.  See below for
-        details about this string.</param>
+      <param name="filter">The filter string can contain search data.  See below for details about this string.</param>
       <param name="searchInFolders">The folders where the search will start.</param>
       <returns>
         <para>Array of matching asset. Note that GUIDs will be returned.</para>
@@ -3619,7 +3617,7 @@ Get the GUID and local file id from an object instance id.</para>
     </member>
     <member name="P:UnityEditor.AudioImporter.forceToMono">
       <summary>
-        <para>Force this clip to mono?</para>
+        <para>Force audioclips to mono?</para>
       </summary>
     </member>
     <member name="P:UnityEditor.AudioImporter.loadInBackground">
@@ -5199,7 +5197,7 @@ Amount of compression. The value roughly corresponds to the ratio between the re
     </member>
     <member name="F:UnityEditor.BuildOptions.BuildScriptsOnly">
       <summary>
-        <para>Build only the scripts of a project.</para>
+        <para>Only build the scripts in a Project.</para>
       </summary>
     </member>
     <member name="F:UnityEditor.BuildOptions.CompressWithLz4">
@@ -5459,7 +5457,7 @@ These will be used as asset names, which you can then pass to AssetBundle.Load t
       </summary>
       <param name="buildPlayerOptions">Provide various options to control the behavior of BuildPipeline.BuildPlayer.</param>
       <returns>
-        <para>An error message if an error occurred.</para>
+        <para>A BuildReport giving build process information.</para>
       </returns>
     </member>
     <member name="M:UnityEditor.BuildPipeline.BuildPlayer(System.String[],System.String,UnityEditor.BuildTarget,UnityEditor.BuildOptions)">
@@ -7379,12 +7377,15 @@ See DecoratorDrawer for an example of how to use this.</para>
     </member>
     <member name="M:UnityEditor.Editor.RenderStaticPreview(System.String,UnityEngine.Object[],System.Int32,System.Int32)">
       <summary>
-        <para>Override this method if you want to render a static preview that shows.</para>
+        <para>Override this method if you want to render a static preview.</para>
       </summary>
-      <param name="assetPath"></param>
-      <param name="subAssets"></param>
-      <param name="width"></param>
-      <param name="height"></param>
+      <param name="assetPath">The asset to operate on.</param>
+      <param name="subAssets">An array of all Assets at assetPath.</param>
+      <param name="width">Width of the created texture.</param>
+      <param name="height">Height of the created texture.</param>
+      <returns>
+        <para>Generated texture or null.</para>
+      </returns>
     </member>
     <member name="M:UnityEditor.Editor.Repaint">
       <summary>
@@ -7994,7 +7995,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.BoundsField(UnityEngine.Rect,UnityEngine.Bounds)">
       <summary>
-        <para>Make Center &amp; Extents field for entering a Bounds.</para>
+        <para>Makes Center and Extents field for entering a Bounds.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label to display above the field.</param>
@@ -8005,7 +8006,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.BoundsField(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.Bounds)">
       <summary>
-        <para>Make Center &amp; Extents field for entering a Bounds.</para>
+        <para>Makes Center and Extents field for entering a Bounds.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label to display above the field.</param>
@@ -8016,7 +8017,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.BoundsIntField(UnityEngine.Rect,UnityEngine.BoundsInt)">
       <summary>
-        <para>Make Position &amp; Size field for entering a BoundsInt.</para>
+        <para>Makes Position and Size field for entering a BoundsInt.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label to display above the field.</param>
@@ -8027,7 +8028,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.BoundsIntField(UnityEngine.Rect,System.String,UnityEngine.BoundsInt)">
       <summary>
-        <para>Make Position &amp; Size field for entering a BoundsInt.</para>
+        <para>Makes Position and Size field for entering a BoundsInt.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label to display above the field.</param>
@@ -8038,7 +8039,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.BoundsIntField(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.BoundsInt)">
       <summary>
-        <para>Make Position &amp; Size field for entering a BoundsInt.</para>
+        <para>Makes Position and Size field for entering a BoundsInt.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label to display above the field.</param>
@@ -8073,7 +8074,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.ColorField(UnityEngine.Rect,UnityEngine.Color)">
       <summary>
-        <para>Make a field for selecting a Color.</para>
+        <para>Makes a field for selecting a Color.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label to display in front of the field.</param>
@@ -8088,7 +8089,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.ColorField(UnityEngine.Rect,System.String,UnityEngine.Color)">
       <summary>
-        <para>Make a field for selecting a Color.</para>
+        <para>Makes a field for selecting a Color.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label to display in front of the field.</param>
@@ -8103,7 +8104,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.ColorField(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.Color)">
       <summary>
-        <para>Make a field for selecting a Color.</para>
+        <para>Makes a field for selecting a Color.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label to display in front of the field.</param>
@@ -8118,7 +8119,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.ColorField(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.Color,System.Boolean,System.Boolean,System.Boolean)">
       <summary>
-        <para>Make a field for selecting a Color.</para>
+        <para>Makes a field for selecting a Color.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label to display in front of the field.</param>
@@ -8133,7 +8134,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.ColorField(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.Color,System.Boolean,System.Boolean,System.Boolean,UnityEditor.ColorPickerHDRConfig)">
       <summary>
-        <para>Make a field for selecting a Color.</para>
+        <para>Makes a field for selecting a Color.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label to display in front of the field.</param>
@@ -8148,7 +8149,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.CurveField(UnityEngine.Rect,UnityEngine.AnimationCurve)">
       <summary>
-        <para>Make a field for editing an AnimationCurve.</para>
+        <para>Makes a field for editing an AnimationCurve.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label to display in front of the field.</param>
@@ -8161,7 +8162,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.CurveField(UnityEngine.Rect,System.String,UnityEngine.AnimationCurve)">
       <summary>
-        <para>Make a field for editing an AnimationCurve.</para>
+        <para>Makes a field for editing an AnimationCurve.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label to display in front of the field.</param>
@@ -8174,7 +8175,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.CurveField(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.AnimationCurve)">
       <summary>
-        <para>Make a field for editing an AnimationCurve.</para>
+        <para>Makes a field for editing an AnimationCurve.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label to display in front of the field.</param>
@@ -8187,7 +8188,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.CurveField(UnityEngine.Rect,UnityEngine.AnimationCurve,UnityEngine.Color,UnityEngine.Rect)">
       <summary>
-        <para>Make a field for editing an AnimationCurve.</para>
+        <para>Makes a field for editing an AnimationCurve.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label to display in front of the field.</param>
@@ -8200,7 +8201,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.CurveField(UnityEngine.Rect,System.String,UnityEngine.AnimationCurve,UnityEngine.Color,UnityEngine.Rect)">
       <summary>
-        <para>Make a field for editing an AnimationCurve.</para>
+        <para>Makes a field for editing an AnimationCurve.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label to display in front of the field.</param>
@@ -8213,7 +8214,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.CurveField(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.AnimationCurve,UnityEngine.Color,UnityEngine.Rect)">
       <summary>
-        <para>Make a field for editing an AnimationCurve.</para>
+        <para>Makes a field for editing an AnimationCurve.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label to display in front of the field.</param>
@@ -8226,7 +8227,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.CurveField(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.Color,UnityEngine.Rect)">
       <summary>
-        <para>Make a field for editing an AnimationCurve.</para>
+        <para>Makes a field for editing an AnimationCurve.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="property">The curve to edit.</param>
@@ -8236,7 +8237,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.CurveField(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.Color,UnityEngine.Rect,UnityEngine.GUIContent)">
       <summary>
-        <para>Make a field for editing an AnimationCurve.</para>
+        <para>Makes a field for editing an AnimationCurve.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="property">The curve to edit.</param>
@@ -8246,7 +8247,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.DelayedDoubleField(UnityEngine.Rect,System.Double,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a delayed text field for entering doubles.</para>
+        <para>Makes a delayed text field for entering doubles.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the double field.</param>
       <param name="label">Optional label to display in front of the double field.</param>
@@ -8258,7 +8259,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.DelayedDoubleField(UnityEngine.Rect,System.String,System.Double,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a delayed text field for entering doubles.</para>
+        <para>Makes a delayed text field for entering doubles.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the double field.</param>
       <param name="label">Optional label to display in front of the double field.</param>
@@ -8270,7 +8271,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.DelayedDoubleField(UnityEngine.Rect,UnityEngine.GUIContent,System.Double,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a delayed text field for entering doubles.</para>
+        <para>Makes a delayed text field for entering doubles.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the double field.</param>
       <param name="label">Optional label to display in front of the double field.</param>
@@ -8282,7 +8283,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.DelayedDoubleField">
       <summary>
-        <para>Make a delayed text field for entering doubles.</para>
+        <para>Makes a delayed text field for entering doubles.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the double field.</param>
       <param name="property">The double property to edit.</param>
@@ -8290,7 +8291,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.DelayedFloatField(UnityEngine.Rect,System.Single,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a delayed text field for entering floats.</para>
+        <para>Makes a delayed text field for entering floats.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the float field.</param>
       <param name="label">Optional label to display in front of the float field.</param>
@@ -8302,7 +8303,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.DelayedFloatField(UnityEngine.Rect,System.String,System.Single,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a delayed text field for entering floats.</para>
+        <para>Makes a delayed text field for entering floats.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the float field.</param>
       <param name="label">Optional label to display in front of the float field.</param>
@@ -8314,7 +8315,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.DelayedFloatField(UnityEngine.Rect,UnityEngine.GUIContent,System.Single,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a delayed text field for entering floats.</para>
+        <para>Makes a delayed text field for entering floats.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the float field.</param>
       <param name="label">Optional label to display in front of the float field.</param>
@@ -8326,7 +8327,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.DelayedFloatField(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
       <summary>
-        <para>Make a delayed text field for entering floats.</para>
+        <para>Makes a delayed text field for entering floats.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the float field.</param>
       <param name="property">The float property to edit.</param>
@@ -8334,7 +8335,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.DelayedIntField(UnityEngine.Rect,System.Int32,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a delayed text field for entering integers.</para>
+        <para>Makes a delayed text field for entering integers.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the int field.</param>
       <param name="label">Optional label to display in front of the int field.</param>
@@ -8346,7 +8347,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.DelayedIntField(UnityEngine.Rect,System.String,System.Int32,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a delayed text field for entering integers.</para>
+        <para>Makes a delayed text field for entering integers.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the int field.</param>
       <param name="label">Optional label to display in front of the int field.</param>
@@ -8358,7 +8359,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.DelayedIntField(UnityEngine.Rect,UnityEngine.GUIContent,System.Int32,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a delayed text field for entering integers.</para>
+        <para>Makes a delayed text field for entering integers.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the int field.</param>
       <param name="label">Optional label to display in front of the int field.</param>
@@ -8378,7 +8379,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.DelayedTextField(UnityEngine.Rect,System.String,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a delayed text field.</para>
+        <para>Makes a delayed text field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the text field.</param>
       <param name="label">Optional label to display in front of the int field.</param>
@@ -8390,7 +8391,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.DelayedTextField(UnityEngine.Rect,System.String,System.String,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a delayed text field.</para>
+        <para>Makes a delayed text field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the text field.</param>
       <param name="label">Optional label to display in front of the int field.</param>
@@ -8402,7 +8403,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.DelayedTextField(UnityEngine.Rect,UnityEngine.GUIContent,System.String,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a delayed text field.</para>
+        <para>Makes a delayed text field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the text field.</param>
       <param name="label">Optional label to display in front of the int field.</param>
@@ -8414,7 +8415,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.DelayedTextField(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
       <summary>
-        <para>Make a delayed text field.</para>
+        <para>Makes a delayed text field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the text field.</param>
       <param name="property">The text property to edit.</param>
@@ -8444,7 +8445,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.DoubleField(UnityEngine.Rect,System.Double,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a text field for entering doubles.</para>
+        <para>Makes a text field for entering doubles.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the double field.</param>
       <param name="label">Optional label to display in front of the double field.</param>
@@ -8456,7 +8457,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.DoubleField(UnityEngine.Rect,System.String,System.Double,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a text field for entering doubles.</para>
+        <para>Makes a text field for entering doubles.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the double field.</param>
       <param name="label">Optional label to display in front of the double field.</param>
@@ -8468,7 +8469,7 @@ See Also: EditorBuildSettingsScene, EditorBuildSettings.scenes.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.DoubleField(UnityEngine.Rect,UnityEngine.GUIContent,System.Double,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a text field for entering doubles.</para>
+        <para>Makes a text field for entering doubles.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the double field.</param>
       <param name="label">Optional label to display in front of the double field.</param>
@@ -8591,7 +8592,7 @@ It sets material _Mip property.</param>
     </member>
     <member name="M:UnityEditor.EditorGUI.DropdownButton(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.FocusType)">
       <summary>
-        <para>Make a button that reacts to mouse down, for displaying your own dropdown content.</para>
+        <para>Makes a button that reacts to mouse down, for displaying your own dropdown content.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the button.</param>
       <param name="content">Text, image and tooltip for this button.</param>
@@ -8603,7 +8604,7 @@ It sets material _Mip property.</param>
     </member>
     <member name="M:UnityEditor.EditorGUI.DropdownButton(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.FocusType,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a button that reacts to mouse down, for displaying your own dropdown content.</para>
+        <para>Makes a button that reacts to mouse down, for displaying your own dropdown content.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the button.</param>
       <param name="content">Text, image and tooltip for this button.</param>
@@ -8679,6 +8680,7 @@ It sets material _Mip property.</param>
       <param name="label">Optional label to display in front of the enum flags field.</param>
       <param name="enumValue">Enum flags value (Only supports enum values for enum types with int as the underlying type).</param>
       <param name="style">Optional GUIStyle.</param>
+      <param name="includeObsolete">Set to true to include Enum values with ObsoleteAttribute. Set to false to exclude Enum values with ObsoleteAttribute.</param>
       <returns>
         <para>The enum flags value modified by the user. This is a selection BitMask where each bit represents an Enum value index. (Note this returned value is not itself an Enum).</para>
       </returns>
@@ -8691,6 +8693,7 @@ It sets material _Mip property.</param>
       <param name="label">Optional label to display in front of the enum flags field.</param>
       <param name="enumValue">Enum flags value (Only supports enum values for enum types with int as the underlying type).</param>
       <param name="style">Optional GUIStyle.</param>
+      <param name="includeObsolete">Set to true to include Enum values with ObsoleteAttribute. Set to false to exclude Enum values with ObsoleteAttribute.</param>
       <returns>
         <para>The enum flags value modified by the user. This is a selection BitMask where each bit represents an Enum value index. (Note this returned value is not itself an Enum).</para>
       </returns>
@@ -8703,6 +8706,7 @@ It sets material _Mip property.</param>
       <param name="label">Optional label to display in front of the enum flags field.</param>
       <param name="enumValue">Enum flags value (Only supports enum values for enum types with int as the underlying type).</param>
       <param name="style">Optional GUIStyle.</param>
+      <param name="includeObsolete">Set to true to include Enum values with ObsoleteAttribute. Set to false to exclude Enum values with ObsoleteAttribute.</param>
       <returns>
         <para>The enum flags value modified by the user. This is a selection BitMask where each bit represents an Enum value index. (Note this returned value is not itself an Enum).</para>
       </returns>
@@ -8715,6 +8719,7 @@ It sets material _Mip property.</param>
       <param name="label">Optional label to display in front of the enum flags field.</param>
       <param name="enumValue">Enum flags value (Only supports enum values for enum types with int as the underlying type).</param>
       <param name="style">Optional GUIStyle.</param>
+      <param name="includeObsolete">Set to true to include Enum values with ObsoleteAttribute. Set to false to exclude Enum values with ObsoleteAttribute.</param>
       <returns>
         <para>The enum flags value modified by the user. This is a selection BitMask where each bit represents an Enum value index. (Note this returned value is not itself an Enum).</para>
       </returns>
@@ -8727,6 +8732,7 @@ It sets material _Mip property.</param>
       <param name="label">Optional label to display in front of the enum flags field.</param>
       <param name="enumValue">Enum flags value (Only supports enum values for enum types with int as the underlying type).</param>
       <param name="style">Optional GUIStyle.</param>
+      <param name="includeObsolete">Set to true to include Enum values with ObsoleteAttribute. Set to false to exclude Enum values with ObsoleteAttribute.</param>
       <returns>
         <para>The enum flags value modified by the user. This is a selection BitMask where each bit represents an Enum value index. (Note this returned value is not itself an Enum).</para>
       </returns>
@@ -8739,6 +8745,20 @@ It sets material _Mip property.</param>
       <param name="label">Optional label to display in front of the enum flags field.</param>
       <param name="enumValue">Enum flags value (Only supports enum values for enum types with int as the underlying type).</param>
       <param name="style">Optional GUIStyle.</param>
+      <param name="includeObsolete">Set to true to include Enum values with ObsoleteAttribute. Set to false to exclude Enum values with ObsoleteAttribute.</param>
+      <returns>
+        <para>The enum flags value modified by the user. This is a selection BitMask where each bit represents an Enum value index. (Note this returned value is not itself an Enum).</para>
+      </returns>
+    </member>
+    <member name="M:UnityEditor.EditorGUI.EnumFlagsField">
+      <summary>
+        <para>Displays a menu with an option for every value of the enum type when clicked. An option for the value 0 with name "Nothing" and an option for the value ~0 (that is, all bits set) with the name "Everything" are always displayed at the top of the menu. The names for the values 0 and ~0 can be overriden by defining these values in the enum type.</para>
+      </summary>
+      <param name="position">Rectangle on the screen to use for the enum flags field.</param>
+      <param name="label">Optional label to display in front of the enum flags field.</param>
+      <param name="enumValue">Enum flags value (Only supports enum values for enum types with int as the underlying type).</param>
+      <param name="style">Optional GUIStyle.</param>
+      <param name="includeObsolete">Set to true to include Enum values with ObsoleteAttribute. Set to false to exclude Enum values with ObsoleteAttribute.</param>
       <returns>
         <para>The enum flags value modified by the user. This is a selection BitMask where each bit represents an Enum value index. (Note this returned value is not itself an Enum).</para>
       </returns>
@@ -8747,7 +8767,7 @@ It sets material _Mip property.</param>
       <summary>
         <para>This method is obsolete. Use EditorGUI.EnumFlagsField instead.
 
-Make a field for enum based masks.</para>
+Makes a field for enum based masks.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for this control.</param>
       <param name="label">Caption/label for the control.</param>
@@ -8761,7 +8781,7 @@ Make a field for enum based masks.</para>
       <summary>
         <para>This method is obsolete. Use EditorGUI.EnumFlagsField instead.
 
-Make a field for enum based masks.</para>
+Makes a field for enum based masks.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for this control.</param>
       <param name="label">Caption/label for the control.</param>
@@ -8775,7 +8795,7 @@ Make a field for enum based masks.</para>
       <summary>
         <para>This method is obsolete. Use EditorGUI.EnumFlagsField instead.
 
-Make a field for enum based masks.</para>
+Makes a field for enum based masks.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for this control.</param>
       <param name="label">Caption/label for the control.</param>
@@ -8789,7 +8809,7 @@ Make a field for enum based masks.</para>
       <summary>
         <para>This method is obsolete. Use EditorGUI.EnumFlagsField instead.
 
-Make a field for enum based masks.</para>
+Makes a field for enum based masks.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for this control.</param>
       <param name="label">Caption/label for the control.</param>
@@ -8803,7 +8823,7 @@ Make a field for enum based masks.</para>
       <summary>
         <para>This method is obsolete. Use EditorGUI.EnumFlagsField instead.
 
-Make a field for enum based masks.</para>
+Makes a field for enum based masks.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for this control.</param>
       <param name="label">Caption/label for the control.</param>
@@ -8817,7 +8837,7 @@ Make a field for enum based masks.</para>
       <summary>
         <para>This method is obsolete. Use EditorGUI.EnumFlagsField instead.
 
-Make a field for enum based masks.</para>
+Makes a field for enum based masks.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for this control.</param>
       <param name="label">Caption/label for the control.</param>
@@ -8831,7 +8851,7 @@ Make a field for enum based masks.</para>
       <summary>
         <para>This method is obsolete. Use EditorGUI.EnumFlagsField instead.
 
-Make an enum popup selection field for a bitmask.</para>
+Makes an enum popup selection field for a bitmask.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -8845,7 +8865,7 @@ Make an enum popup selection field for a bitmask.</para>
       <summary>
         <para>This method is obsolete. Use EditorGUI.EnumFlagsField instead.
 
-Make an enum popup selection field for a bitmask.</para>
+Makes an enum popup selection field for a bitmask.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -8859,7 +8879,7 @@ Make an enum popup selection field for a bitmask.</para>
       <summary>
         <para>This method is obsolete. Use EditorGUI.EnumFlagsField instead.
 
-Make an enum popup selection field for a bitmask.</para>
+Makes an enum popup selection field for a bitmask.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -8873,7 +8893,7 @@ Make an enum popup selection field for a bitmask.</para>
       <summary>
         <para>This method is obsolete. Use EditorGUI.EnumFlagsField instead.
 
-Make an enum popup selection field for a bitmask.</para>
+Makes an enum popup selection field for a bitmask.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -8885,79 +8905,105 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.EnumPopup(UnityEngine.Rect,System.Enum)">
       <summary>
-        <para>Make an enum popup selection field.</para>
+        <para>Makes an enum popup selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
       <param name="selected">The enum option the field shows.</param>
       <param name="style">Optional GUIStyle.</param>
+      <param name="includeObsolete">Set to true to include Enum values with ObsoleteAttribute. Set to false to exclude Enum values with ObsoleteAttribute.</param>
+      <param name="checkEnabled">Method called for each Enum value displayed. The specified method should return true if the option can be selected, false otherwise.</param>
       <returns>
         <para>The enum option that has been selected by the user.</para>
       </returns>
     </member>
     <member name="M:UnityEditor.EditorGUI.EnumPopup(UnityEngine.Rect,System.String,System.Enum)">
       <summary>
-        <para>Make an enum popup selection field.</para>
+        <para>Makes an enum popup selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
       <param name="selected">The enum option the field shows.</param>
       <param name="style">Optional GUIStyle.</param>
+      <param name="includeObsolete">Set to true to include Enum values with ObsoleteAttribute. Set to false to exclude Enum values with ObsoleteAttribute.</param>
+      <param name="checkEnabled">Method called for each Enum value displayed. The specified method should return true if the option can be selected, false otherwise.</param>
       <returns>
         <para>The enum option that has been selected by the user.</para>
       </returns>
     </member>
     <member name="M:UnityEditor.EditorGUI.EnumPopup(UnityEngine.Rect,UnityEngine.GUIContent,System.Enum)">
       <summary>
-        <para>Make an enum popup selection field.</para>
+        <para>Makes an enum popup selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
       <param name="selected">The enum option the field shows.</param>
       <param name="style">Optional GUIStyle.</param>
+      <param name="includeObsolete">Set to true to include Enum values with ObsoleteAttribute. Set to false to exclude Enum values with ObsoleteAttribute.</param>
+      <param name="checkEnabled">Method called for each Enum value displayed. The specified method should return true if the option can be selected, false otherwise.</param>
       <returns>
         <para>The enum option that has been selected by the user.</para>
       </returns>
     </member>
     <member name="M:UnityEditor.EditorGUI.EnumPopup(UnityEngine.Rect,System.Enum,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make an enum popup selection field.</para>
+        <para>Makes an enum popup selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
       <param name="selected">The enum option the field shows.</param>
       <param name="style">Optional GUIStyle.</param>
+      <param name="includeObsolete">Set to true to include Enum values with ObsoleteAttribute. Set to false to exclude Enum values with ObsoleteAttribute.</param>
+      <param name="checkEnabled">Method called for each Enum value displayed. The specified method should return true if the option can be selected, false otherwise.</param>
       <returns>
         <para>The enum option that has been selected by the user.</para>
       </returns>
     </member>
     <member name="M:UnityEditor.EditorGUI.EnumPopup(UnityEngine.Rect,System.String,System.Enum,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make an enum popup selection field.</para>
+        <para>Makes an enum popup selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
       <param name="selected">The enum option the field shows.</param>
       <param name="style">Optional GUIStyle.</param>
+      <param name="includeObsolete">Set to true to include Enum values with ObsoleteAttribute. Set to false to exclude Enum values with ObsoleteAttribute.</param>
+      <param name="checkEnabled">Method called for each Enum value displayed. The specified method should return true if the option can be selected, false otherwise.</param>
       <returns>
         <para>The enum option that has been selected by the user.</para>
       </returns>
     </member>
     <member name="M:UnityEditor.EditorGUI.EnumPopup(UnityEngine.Rect,UnityEngine.GUIContent,System.Enum,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make an enum popup selection field.</para>
+        <para>Makes an enum popup selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
       <param name="selected">The enum option the field shows.</param>
       <param name="style">Optional GUIStyle.</param>
+      <param name="includeObsolete">Set to true to include Enum values with ObsoleteAttribute. Set to false to exclude Enum values with ObsoleteAttribute.</param>
+      <param name="checkEnabled">Method called for each Enum value displayed. The specified method should return true if the option can be selected, false otherwise.</param>
+      <returns>
+        <para>The enum option that has been selected by the user.</para>
+      </returns>
+    </member>
+    <member name="M:UnityEditor.EditorGUI.EnumPopup">
+      <summary>
+        <para>Makes an enum popup selection field.</para>
+      </summary>
+      <param name="position">Rectangle on the screen to use for the field.</param>
+      <param name="label">Optional label in front of the field.</param>
+      <param name="selected">The enum option the field shows.</param>
+      <param name="style">Optional GUIStyle.</param>
+      <param name="includeObsolete">Set to true to include Enum values with ObsoleteAttribute. Set to false to exclude Enum values with ObsoleteAttribute.</param>
+      <param name="checkEnabled">Method called for each Enum value displayed. The specified method should return true if the option can be selected, false otherwise.</param>
       <returns>
         <para>The enum option that has been selected by the user.</para>
       </returns>
     </member>
     <member name="M:UnityEditor.EditorGUI.FloatField(UnityEngine.Rect,System.Single,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a text field for entering floats.</para>
+        <para>Makes a text field for entering floats.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the float field.</param>
       <param name="label">Optional label to display in front of the float field.</param>
@@ -8969,7 +9015,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.FloatField(UnityEngine.Rect,System.String,System.Single,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a text field for entering floats.</para>
+        <para>Makes a text field for entering floats.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the float field.</param>
       <param name="label">Optional label to display in front of the float field.</param>
@@ -8981,7 +9027,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.FloatField(UnityEngine.Rect,UnityEngine.GUIContent,System.Single,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a text field for entering floats.</para>
+        <para>Makes a text field for entering floats.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the float field.</param>
       <param name="label">Optional label to display in front of the float field.</param>
@@ -8999,7 +9045,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Foldout(UnityEngine.Rect,System.Boolean,System.String)">
       <summary>
-        <para>Make a label with a foldout arrow to the left of it.</para>
+        <para>Makes a label with a foldout arrow to the left of it.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the arrow and label.</param>
       <param name="foldout">The shown foldout state.</param>
@@ -9012,7 +9058,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Foldout(UnityEngine.Rect,System.Boolean,UnityEngine.GUIContent)">
       <summary>
-        <para>Make a label with a foldout arrow to the left of it.</para>
+        <para>Makes a label with a foldout arrow to the left of it.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the arrow and label.</param>
       <param name="foldout">The shown foldout state.</param>
@@ -9025,7 +9071,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Foldout(UnityEngine.Rect,System.Boolean,System.String,System.Boolean)">
       <summary>
-        <para>Make a label with a foldout arrow to the left of it.</para>
+        <para>Makes a label with a foldout arrow to the left of it.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the arrow and label.</param>
       <param name="foldout">The shown foldout state.</param>
@@ -9038,7 +9084,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Foldout(UnityEngine.Rect,System.Boolean,UnityEngine.GUIContent,System.Boolean)">
       <summary>
-        <para>Make a label with a foldout arrow to the left of it.</para>
+        <para>Makes a label with a foldout arrow to the left of it.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the arrow and label.</param>
       <param name="foldout">The shown foldout state.</param>
@@ -9051,7 +9097,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Foldout(UnityEngine.Rect,System.Boolean,System.String,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a label with a foldout arrow to the left of it.</para>
+        <para>Makes a label with a foldout arrow to the left of it.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the arrow and label.</param>
       <param name="foldout">The shown foldout state.</param>
@@ -9064,7 +9110,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Foldout(UnityEngine.Rect,System.Boolean,System.String,System.Boolean,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a label with a foldout arrow to the left of it.</para>
+        <para>Makes a label with a foldout arrow to the left of it.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the arrow and label.</param>
       <param name="foldout">The shown foldout state.</param>
@@ -9077,7 +9123,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Foldout(UnityEngine.Rect,System.Boolean,UnityEngine.GUIContent,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a label with a foldout arrow to the left of it.</para>
+        <para>Makes a label with a foldout arrow to the left of it.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the arrow and label.</param>
       <param name="foldout">The shown foldout state.</param>
@@ -9090,7 +9136,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Foldout(UnityEngine.Rect,System.Boolean,UnityEngine.GUIContent,System.Boolean,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a label with a foldout arrow to the left of it.</para>
+        <para>Makes a label with a foldout arrow to the left of it.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the arrow and label.</param>
       <param name="foldout">The shown foldout state.</param>
@@ -9148,7 +9194,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.HandlePrefixLabel(UnityEngine.Rect,UnityEngine.Rect,UnityEngine.GUIContent)">
       <summary>
-        <para>Make a label for some control.</para>
+        <para>Makes a label for some control.</para>
       </summary>
       <param name="totalPosition">Rectangle on the screen to use in total for both the label and the control.</param>
       <param name="labelPosition">Rectangle on the screen to use for the label.</param>
@@ -9158,7 +9204,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.HandlePrefixLabel(UnityEngine.Rect,UnityEngine.Rect,UnityEngine.GUIContent,System.Int32)">
       <summary>
-        <para>Make a label for some control.</para>
+        <para>Makes a label for some control.</para>
       </summary>
       <param name="totalPosition">Rectangle on the screen to use in total for both the label and the control.</param>
       <param name="labelPosition">Rectangle on the screen to use for the label.</param>
@@ -9168,7 +9214,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.HandlePrefixLabel(UnityEngine.Rect,UnityEngine.Rect,UnityEngine.GUIContent,System.Int32,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a label for some control.</para>
+        <para>Makes a label for some control.</para>
       </summary>
       <param name="totalPosition">Rectangle on the screen to use in total for both the label and the control.</param>
       <param name="labelPosition">Rectangle on the screen to use for the label.</param>
@@ -9178,7 +9224,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.HelpBox(UnityEngine.Rect,System.String,UnityEditor.MessageType)">
       <summary>
-        <para>Make a help box with a message to the user.</para>
+        <para>Makes a help box with a message to the user.</para>
       </summary>
       <param name="position">Rectangle on the screen to draw the help box within.</param>
       <param name="message">The message text.</param>
@@ -9203,7 +9249,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.InspectorTitlebar">
       <summary>
-        <para>Make an inspector-window-like titlebar.</para>
+        <para>Makes an inspector-window-like titlebar.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the titlebar.</param>
       <param name="foldout">The foldout state shown with the arrow.</param>
@@ -9216,7 +9262,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.InspectorTitlebar">
       <summary>
-        <para>Make an inspector-window-like titlebar.</para>
+        <para>Makes an inspector-window-like titlebar.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the titlebar.</param>
       <param name="foldout">The foldout state shown with the arrow.</param>
@@ -9229,7 +9275,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.InspectorTitlebar(UnityEngine.Rect,System.Boolean,UnityEngine.Object,System.Boolean)">
       <summary>
-        <para>Make an inspector-window-like titlebar.</para>
+        <para>Makes an inspector-window-like titlebar.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the titlebar.</param>
       <param name="foldout">The foldout state shown with the arrow.</param>
@@ -9242,7 +9288,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.InspectorTitlebar(UnityEngine.Rect,System.Boolean,UnityEngine.Object[],System.Boolean)">
       <summary>
-        <para>Make an inspector-window-like titlebar.</para>
+        <para>Makes an inspector-window-like titlebar.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the titlebar.</param>
       <param name="foldout">The foldout state shown with the arrow.</param>
@@ -9255,7 +9301,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.IntField(UnityEngine.Rect,System.Int32)">
       <summary>
-        <para>Make a text field for entering integers.</para>
+        <para>Makes a text field for entering integers.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the int field.</param>
       <param name="label">Optional label to display in front of the int field.</param>
@@ -9267,7 +9313,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.IntField(UnityEngine.Rect,System.String,System.Int32)">
       <summary>
-        <para>Make a text field for entering integers.</para>
+        <para>Makes a text field for entering integers.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the int field.</param>
       <param name="label">Optional label to display in front of the int field.</param>
@@ -9279,7 +9325,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.IntField(UnityEngine.Rect,UnityEngine.GUIContent,System.Int32)">
       <summary>
-        <para>Make a text field for entering integers.</para>
+        <para>Makes a text field for entering integers.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the int field.</param>
       <param name="label">Optional label to display in front of the int field.</param>
@@ -9291,7 +9337,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.IntField(UnityEngine.Rect,System.Int32,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a text field for entering integers.</para>
+        <para>Makes a text field for entering integers.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the int field.</param>
       <param name="label">Optional label to display in front of the int field.</param>
@@ -9303,7 +9349,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.IntField(UnityEngine.Rect,System.String,System.Int32,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a text field for entering integers.</para>
+        <para>Makes a text field for entering integers.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the int field.</param>
       <param name="label">Optional label to display in front of the int field.</param>
@@ -9315,7 +9361,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.IntField(UnityEngine.Rect,UnityEngine.GUIContent,System.Int32,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a text field for entering integers.</para>
+        <para>Makes a text field for entering integers.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the int field.</param>
       <param name="label">Optional label to display in front of the int field.</param>
@@ -9327,7 +9373,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.IntPopup(UnityEngine.Rect,System.Int32,System.String[],System.Int32[])">
       <summary>
-        <para>Make an integer popup selection field.</para>
+        <para>Makes an integer popup selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -9341,7 +9387,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.IntPopup(UnityEngine.Rect,System.Int32,UnityEngine.GUIContent[],System.Int32[])">
       <summary>
-        <para>Make an integer popup selection field.</para>
+        <para>Makes an integer popup selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -9355,7 +9401,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.IntPopup(UnityEngine.Rect,System.Int32,System.String[],System.Int32[],UnityEngine.GUIStyle)">
       <summary>
-        <para>Make an integer popup selection field.</para>
+        <para>Makes an integer popup selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -9369,7 +9415,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.IntPopup(UnityEngine.Rect,System.Int32,UnityEngine.GUIContent[],System.Int32[],UnityEngine.GUIStyle)">
       <summary>
-        <para>Make an integer popup selection field.</para>
+        <para>Makes an integer popup selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -9383,7 +9429,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.IntPopup(UnityEngine.Rect,System.String,System.Int32,System.String[],System.Int32[],UnityEngine.GUIStyle)">
       <summary>
-        <para>Make an integer popup selection field.</para>
+        <para>Makes an integer popup selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -9397,7 +9443,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.IntPopup(UnityEngine.Rect,System.String,System.Int32,System.String[],System.Int32[])">
       <summary>
-        <para>Make an integer popup selection field.</para>
+        <para>Makes an integer popup selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -9411,7 +9457,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.IntPopup(UnityEngine.Rect,UnityEngine.GUIContent,System.Int32,UnityEngine.GUIContent[],System.Int32[],UnityEngine.GUIStyle)">
       <summary>
-        <para>Make an integer popup selection field.</para>
+        <para>Makes an integer popup selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -9425,7 +9471,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.IntPopup(UnityEngine.Rect,UnityEngine.GUIContent,System.Int32,UnityEngine.GUIContent[],System.Int32[])">
       <summary>
-        <para>Make an integer popup selection field.</para>
+        <para>Makes an integer popup selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -9459,7 +9505,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.IntSlider(UnityEngine.Rect,System.Int32,System.Int32,System.Int32)">
       <summary>
-        <para>Make a slider the user can drag to change an integer value between a min and a max.</para>
+        <para>Makes a slider the user can drag to change an integer value between a min and a max.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the slider.</param>
       <param name="label">Optional label in front of the slider.</param>
@@ -9472,7 +9518,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.IntSlider(UnityEngine.Rect,System.String,System.Int32,System.Int32,System.Int32)">
       <summary>
-        <para>Make a slider the user can drag to change an integer value between a min and a max.</para>
+        <para>Makes a slider the user can drag to change an integer value between a min and a max.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the slider.</param>
       <param name="label">Optional label in front of the slider.</param>
@@ -9485,7 +9531,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.IntSlider(UnityEngine.Rect,UnityEngine.GUIContent,System.Int32,System.Int32,System.Int32)">
       <summary>
-        <para>Make a slider the user can drag to change an integer value between a min and a max.</para>
+        <para>Makes a slider the user can drag to change an integer value between a min and a max.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the slider.</param>
       <param name="label">Optional label in front of the slider.</param>
@@ -9498,7 +9544,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.IntSlider(UnityEngine.Rect,UnityEditor.SerializedProperty,System.Int32,System.Int32)">
       <summary>
-        <para>Make a slider the user can drag to change a value between a min and a max.</para>
+        <para>Makes a slider the user can drag to change a value between a min and a max.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the slider.</param>
       <param name="label">Optional label in front of the slider.</param>
@@ -9508,7 +9554,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.IntSlider(UnityEngine.Rect,UnityEditor.SerializedProperty,System.Int32,System.Int32,System.String)">
       <summary>
-        <para>Make a slider the user can drag to change a value between a min and a max.</para>
+        <para>Makes a slider the user can drag to change a value between a min and a max.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the slider.</param>
       <param name="label">Optional label in front of the slider.</param>
@@ -9518,7 +9564,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.IntSlider(UnityEngine.Rect,UnityEditor.SerializedProperty,System.Int32,System.Int32,UnityEngine.GUIContent)">
       <summary>
-        <para>Make a slider the user can drag to change a value between a min and a max.</para>
+        <para>Makes a slider the user can drag to change a value between a min and a max.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the slider.</param>
       <param name="label">Optional label in front of the slider.</param>
@@ -9528,7 +9574,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.LabelField(UnityEngine.Rect,System.String)">
       <summary>
-        <para>Make a label field. (Useful for showing read-only info.)</para>
+        <para>Makes a label field. (Useful for showing read-only info.)</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the label field.</param>
       <param name="label">Label in front of the label field.</param>
@@ -9537,7 +9583,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.LabelField(UnityEngine.Rect,UnityEngine.GUIContent)">
       <summary>
-        <para>Make a label field. (Useful for showing read-only info.)</para>
+        <para>Makes a label field. (Useful for showing read-only info.)</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the label field.</param>
       <param name="label">Label in front of the label field.</param>
@@ -9546,7 +9592,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.LabelField(UnityEngine.Rect,System.String,System.String)">
       <summary>
-        <para>Make a label field. (Useful for showing read-only info.)</para>
+        <para>Makes a label field. (Useful for showing read-only info.)</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the label field.</param>
       <param name="label">Label in front of the label field.</param>
@@ -9555,7 +9601,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.LabelField(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.GUIContent)">
       <summary>
-        <para>Make a label field. (Useful for showing read-only info.)</para>
+        <para>Makes a label field. (Useful for showing read-only info.)</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the label field.</param>
       <param name="label">Label in front of the label field.</param>
@@ -9564,7 +9610,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.LabelField(UnityEngine.Rect,System.String,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a label field. (Useful for showing read-only info.)</para>
+        <para>Makes a label field. (Useful for showing read-only info.)</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the label field.</param>
       <param name="label">Label in front of the label field.</param>
@@ -9573,7 +9619,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.LabelField(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a label field. (Useful for showing read-only info.)</para>
+        <para>Makes a label field. (Useful for showing read-only info.)</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the label field.</param>
       <param name="label">Label in front of the label field.</param>
@@ -9582,7 +9628,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.LabelField(UnityEngine.Rect,System.String,System.String,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a label field. (Useful for showing read-only info.)</para>
+        <para>Makes a label field. (Useful for showing read-only info.)</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the label field.</param>
       <param name="label">Label in front of the label field.</param>
@@ -9591,7 +9637,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.LabelField(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.GUIContent,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a label field. (Useful for showing read-only info.)</para>
+        <para>Makes a label field. (Useful for showing read-only info.)</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the label field.</param>
       <param name="label">Label in front of the label field.</param>
@@ -9600,7 +9646,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.LayerField(UnityEngine.Rect,System.Int32)">
       <summary>
-        <para>Make a layer selection field.</para>
+        <para>Makes a layer selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -9612,7 +9658,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.LayerField(UnityEngine.Rect,System.String,System.Int32)">
       <summary>
-        <para>Make a layer selection field.</para>
+        <para>Makes a layer selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -9624,7 +9670,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.LayerField(UnityEngine.Rect,UnityEngine.GUIContent,System.Int32)">
       <summary>
-        <para>Make a layer selection field.</para>
+        <para>Makes a layer selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -9636,7 +9682,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.LayerField(UnityEngine.Rect,System.Int32,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a layer selection field.</para>
+        <para>Makes a layer selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -9648,7 +9694,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.LayerField(UnityEngine.Rect,System.String,System.Int32,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a layer selection field.</para>
+        <para>Makes a layer selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -9660,7 +9706,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.LayerField(UnityEngine.Rect,UnityEngine.GUIContent,System.Int32,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a layer selection field.</para>
+        <para>Makes a layer selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -9672,7 +9718,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.LongField(UnityEngine.Rect,System.Int64)">
       <summary>
-        <para>Make a text field for entering long integers.</para>
+        <para>Makes a text field for entering long integers.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the long field.</param>
       <param name="label">Optional label to display in front of the long field.</param>
@@ -9684,7 +9730,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.LongField(UnityEngine.Rect,System.String,System.Int64)">
       <summary>
-        <para>Make a text field for entering long integers.</para>
+        <para>Makes a text field for entering long integers.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the long field.</param>
       <param name="label">Optional label to display in front of the long field.</param>
@@ -9696,7 +9742,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.LongField(UnityEngine.Rect,UnityEngine.GUIContent,System.Int64)">
       <summary>
-        <para>Make a text field for entering long integers.</para>
+        <para>Makes a text field for entering long integers.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the long field.</param>
       <param name="label">Optional label to display in front of the long field.</param>
@@ -9708,7 +9754,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.LongField(UnityEngine.Rect,System.String,System.Int64,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a text field for entering long integers.</para>
+        <para>Makes a text field for entering long integers.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the long field.</param>
       <param name="label">Optional label to display in front of the long field.</param>
@@ -9720,7 +9766,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.LongField(UnityEngine.Rect,UnityEngine.GUIContent,System.Int64,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a text field for entering long integers.</para>
+        <para>Makes a text field for entering long integers.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the long field.</param>
       <param name="label">Optional label to display in front of the long field.</param>
@@ -9732,7 +9778,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.MaskField(UnityEngine.Rect,System.Int32,System.String[])">
       <summary>
-        <para>Make a field for masks.</para>
+        <para>Makes a field for masks.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for this control.</param>
       <param name="label">Label for the field.</param>
@@ -9746,7 +9792,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.MaskField(UnityEngine.Rect,System.String,System.Int32,System.String[])">
       <summary>
-        <para>Make a field for masks.</para>
+        <para>Makes a field for masks.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for this control.</param>
       <param name="label">Label for the field.</param>
@@ -9760,7 +9806,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.MaskField(UnityEngine.Rect,UnityEngine.GUIContent,System.Int32,System.String[])">
       <summary>
-        <para>Make a field for masks.</para>
+        <para>Makes a field for masks.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for this control.</param>
       <param name="label">Label for the field.</param>
@@ -9774,7 +9820,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.MaskField(UnityEngine.Rect,UnityEngine.GUIContent,System.Int32,System.String[],UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a field for masks.</para>
+        <para>Makes a field for masks.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for this control.</param>
       <param name="label">Label for the field.</param>
@@ -9788,7 +9834,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.MaskField(UnityEngine.Rect,System.String,System.Int32,System.String[],UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a field for masks.</para>
+        <para>Makes a field for masks.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for this control.</param>
       <param name="label">Label for the field.</param>
@@ -9802,7 +9848,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.MaskField(UnityEngine.Rect,System.Int32,System.String[],UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a field for masks.</para>
+        <para>Makes a field for masks.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for this control.</param>
       <param name="label">Label for the field.</param>
@@ -9816,7 +9862,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.MinMaxSlider(UnityEngine.GUIContent,UnityEngine.Rect,System.Single&amp;,System.Single&amp;,System.Single,System.Single)">
       <summary>
-        <para>Make a special slider the user can use to specify a range between a min and a max.</para>
+        <para>Makes a special slider the user can use to specify a range between a min and a max.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the slider.</param>
       <param name="label">Optional label in front of the slider.</param>
@@ -9827,7 +9873,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.MinMaxSlider(UnityEngine.Rect,System.Single&amp;,System.Single&amp;,System.Single,System.Single)">
       <summary>
-        <para>Make a special slider the user can use to specify a range between a min and a max.</para>
+        <para>Makes a special slider the user can use to specify a range between a min and a max.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the slider.</param>
       <param name="label">Optional label in front of the slider.</param>
@@ -9838,7 +9884,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.MinMaxSlider(UnityEngine.Rect,System.String,System.Single&amp;,System.Single&amp;,System.Single,System.Single)">
       <summary>
-        <para>Make a special slider the user can use to specify a range between a min and a max.</para>
+        <para>Makes a special slider the user can use to specify a range between a min and a max.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the slider.</param>
       <param name="label">Optional label in front of the slider.</param>
@@ -9849,7 +9895,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.MinMaxSlider(UnityEngine.Rect,UnityEngine.GUIContent,System.Single&amp;,System.Single&amp;,System.Single,System.Single)">
       <summary>
-        <para>Make a special slider the user can use to specify a range between a min and a max.</para>
+        <para>Makes a special slider the user can use to specify a range between a min and a max.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the slider.</param>
       <param name="label">Optional label in front of the slider.</param>
@@ -9860,7 +9906,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.MultiFloatField(UnityEngine.Rect,UnityEngine.GUIContent[],System.Single[])">
       <summary>
-        <para>Make a multi-control with text fields for entering multiple floats in the same line.</para>
+        <para>Makes a multi-control with text fields for entering multiple floats in the same line.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the float field.</param>
       <param name="label">Optional label to display in front of the float field.</param>
@@ -9869,7 +9915,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.MultiFloatField(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.GUIContent[],System.Single[])">
       <summary>
-        <para>Make a multi-control with text fields for entering multiple floats in the same line.</para>
+        <para>Makes a multi-control with text fields for entering multiple floats in the same line.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the float field.</param>
       <param name="label">Optional label to display in front of the float field.</param>
@@ -9878,7 +9924,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.MultiIntField(UnityEngine.Rect,UnityEngine.GUIContent[],System.Int32[])">
       <summary>
-        <para>Make a multi-control with text fields for entering multiple integers in the same line.</para>
+        <para>Makes a multi-control with text fields for entering multiple integers in the same line.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the integer field.</param>
       <param name="subLabels">Array with small labels to show in front of each int field. There is room for one letter per field only.</param>
@@ -9886,7 +9932,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.MultiPropertyField(UnityEngine.Rect,UnityEngine.GUIContent[],UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
       <summary>
-        <para>Make a multi-control with several property fields in the same line.</para>
+        <para>Makes a multi-control with several property fields in the same line.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the multi-property field.</param>
       <param name="valuesIterator">The SerializedProperty of the first property to make a control for.</param>
@@ -9895,7 +9941,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.MultiPropertyField(UnityEngine.Rect,UnityEngine.GUIContent[],UnityEditor.SerializedProperty)">
       <summary>
-        <para>Make a multi-control with several property fields in the same line.</para>
+        <para>Makes a multi-control with several property fields in the same line.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the multi-property field.</param>
       <param name="valuesIterator">The SerializedProperty of the first property to make a control for.</param>
@@ -9904,7 +9950,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.ObjectField(UnityEngine.Rect,UnityEngine.Object,System.Type)">
       <summary>
-        <para>Make an object field. You can assign objects either by drag and drop objects or by selecting an object using the Object Picker.</para>
+        <para>Makes an object field. You can assign objects either by drag and drop objects or by selecting an object using the Object Picker.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -9917,7 +9963,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.ObjectField(UnityEngine.Rect,System.String,UnityEngine.Object,System.Type)">
       <summary>
-        <para>Make an object field. You can assign objects either by drag and drop objects or by selecting an object using the Object Picker.</para>
+        <para>Makes an object field. You can assign objects either by drag and drop objects or by selecting an object using the Object Picker.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -9930,7 +9976,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.ObjectField(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.Object,System.Type)">
       <summary>
-        <para>Make an object field. You can assign objects either by drag and drop objects or by selecting an object using the Object Picker.</para>
+        <para>Makes an object field. You can assign objects either by drag and drop objects or by selecting an object using the Object Picker.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -9943,7 +9989,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.ObjectField(UnityEngine.Rect,UnityEngine.Object,System.Type,System.Boolean)">
       <summary>
-        <para>Make an object field. You can assign objects either by drag and drop objects or by selecting an object using the Object Picker.</para>
+        <para>Makes an object field. You can assign objects either by drag and drop objects or by selecting an object using the Object Picker.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -9956,7 +10002,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.ObjectField(UnityEngine.Rect,System.String,UnityEngine.Object,System.Type,System.Boolean)">
       <summary>
-        <para>Make an object field. You can assign objects either by drag and drop objects or by selecting an object using the Object Picker.</para>
+        <para>Makes an object field. You can assign objects either by drag and drop objects or by selecting an object using the Object Picker.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -9969,7 +10015,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.ObjectField(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.Object,System.Type,System.Boolean)">
       <summary>
-        <para>Make an object field. You can assign objects either by drag and drop objects or by selecting an object using the Object Picker.</para>
+        <para>Makes an object field. You can assign objects either by drag and drop objects or by selecting an object using the Object Picker.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -9982,7 +10028,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.ObjectField(UnityEngine.Rect,UnityEditor.SerializedProperty)">
       <summary>
-        <para>Make an object field. You can assign objects either by drag and drop objects or by selecting an object using the Object Picker.</para>
+        <para>Makes an object field. You can assign objects either by drag and drop objects or by selecting an object using the Object Picker.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="property">The object reference property the field shows.</param>
@@ -9991,7 +10037,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.ObjectField(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
       <summary>
-        <para>Make an object field. You can assign objects either by drag and drop objects or by selecting an object using the Object Picker.</para>
+        <para>Makes an object field. You can assign objects either by drag and drop objects or by selecting an object using the Object Picker.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="property">The object reference property the field shows.</param>
@@ -10000,7 +10046,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.ObjectField(UnityEngine.Rect,UnityEditor.SerializedProperty,System.Type)">
       <summary>
-        <para>Make an object field. You can assign objects either by drag and drop objects or by selecting an object using the Object Picker.</para>
+        <para>Makes an object field. You can assign objects either by drag and drop objects or by selecting an object using the Object Picker.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="property">The object reference property the field shows.</param>
@@ -10009,7 +10055,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.ObjectField(UnityEngine.Rect,UnityEditor.SerializedProperty,System.Type,UnityEngine.GUIContent)">
       <summary>
-        <para>Make an object field. You can assign objects either by drag and drop objects or by selecting an object using the Object Picker.</para>
+        <para>Makes an object field. You can assign objects either by drag and drop objects or by selecting an object using the Object Picker.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="property">The object reference property the field shows.</param>
@@ -10018,7 +10064,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.PasswordField(UnityEngine.Rect,System.String)">
       <summary>
-        <para>Make a text field where the user can enter a password.</para>
+        <para>Makes a text field where the user can enter a password.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the password field.</param>
       <param name="label">Optional label to display in front of the password field.</param>
@@ -10030,7 +10076,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.PasswordField(UnityEngine.Rect,System.String,System.String)">
       <summary>
-        <para>Make a text field where the user can enter a password.</para>
+        <para>Makes a text field where the user can enter a password.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the password field.</param>
       <param name="label">Optional label to display in front of the password field.</param>
@@ -10042,7 +10088,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.PasswordField(UnityEngine.Rect,UnityEngine.GUIContent,System.String)">
       <summary>
-        <para>Make a text field where the user can enter a password.</para>
+        <para>Makes a text field where the user can enter a password.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the password field.</param>
       <param name="label">Optional label to display in front of the password field.</param>
@@ -10054,7 +10100,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.PasswordField(UnityEngine.Rect,System.String,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a text field where the user can enter a password.</para>
+        <para>Makes a text field where the user can enter a password.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the password field.</param>
       <param name="label">Optional label to display in front of the password field.</param>
@@ -10066,7 +10112,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.PasswordField(UnityEngine.Rect,System.String,System.String,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a text field where the user can enter a password.</para>
+        <para>Makes a text field where the user can enter a password.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the password field.</param>
       <param name="label">Optional label to display in front of the password field.</param>
@@ -10078,7 +10124,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.PasswordField(UnityEngine.Rect,UnityEngine.GUIContent,System.String,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a text field where the user can enter a password.</para>
+        <para>Makes a text field where the user can enter a password.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the password field.</param>
       <param name="label">Optional label to display in front of the password field.</param>
@@ -10090,7 +10136,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Popup(UnityEngine.Rect,System.Int32,System.String[])">
       <summary>
-        <para>Make a generic popup selection field.</para>
+        <para>Makes a generic popup selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -10103,7 +10149,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Popup(UnityEngine.Rect,System.Int32,UnityEngine.GUIContent[])">
       <summary>
-        <para>Make a generic popup selection field.</para>
+        <para>Makes a generic popup selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -10116,7 +10162,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Popup(UnityEngine.Rect,System.String,System.Int32,System.String[])">
       <summary>
-        <para>Make a generic popup selection field.</para>
+        <para>Makes a generic popup selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -10129,7 +10175,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Popup(UnityEngine.Rect,UnityEngine.GUIContent,System.Int32,UnityEngine.GUIContent[])">
       <summary>
-        <para>Make a generic popup selection field.</para>
+        <para>Makes a generic popup selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -10142,7 +10188,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Popup(UnityEngine.Rect,System.Int32,System.String[],UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a generic popup selection field.</para>
+        <para>Makes a generic popup selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -10155,7 +10201,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Popup(UnityEngine.Rect,System.Int32,UnityEngine.GUIContent[],UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a generic popup selection field.</para>
+        <para>Makes a generic popup selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -10168,7 +10214,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Popup(UnityEngine.Rect,System.String,System.Int32,System.String[],UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a generic popup selection field.</para>
+        <para>Makes a generic popup selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -10181,7 +10227,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Popup(UnityEngine.Rect,UnityEngine.GUIContent,System.Int32,UnityEngine.GUIContent[],UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a generic popup selection field.</para>
+        <para>Makes a generic popup selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -10194,7 +10240,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.PrefixLabel(UnityEngine.Rect,UnityEngine.GUIContent)">
       <summary>
-        <para>Make a label in front of some control.</para>
+        <para>Makes a label in front of some control.</para>
       </summary>
       <param name="totalPosition">Rectangle on the screen to use in total for both the label and the control.</param>
       <param name="id">The unique ID of the control. If none specified, the ID of the following control is used.</param>
@@ -10206,7 +10252,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.PrefixLabel(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a label in front of some control.</para>
+        <para>Makes a label in front of some control.</para>
       </summary>
       <param name="totalPosition">Rectangle on the screen to use in total for both the label and the control.</param>
       <param name="id">The unique ID of the control. If none specified, the ID of the following control is used.</param>
@@ -10218,7 +10264,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.PrefixLabel(UnityEngine.Rect,System.Int32,UnityEngine.GUIContent)">
       <summary>
-        <para>Make a label in front of some control.</para>
+        <para>Makes a label in front of some control.</para>
       </summary>
       <param name="totalPosition">Rectangle on the screen to use in total for both the label and the control.</param>
       <param name="id">The unique ID of the control. If none specified, the ID of the following control is used.</param>
@@ -10230,7 +10276,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.PrefixLabel(UnityEngine.Rect,System.Int32,UnityEngine.GUIContent,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a label in front of some control.</para>
+        <para>Makes a label in front of some control.</para>
       </summary>
       <param name="totalPosition">Rectangle on the screen to use in total for both the label and the control.</param>
       <param name="id">The unique ID of the control. If none specified, the ID of the following control is used.</param>
@@ -10242,7 +10288,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.ProgressBar(UnityEngine.Rect,System.Single,System.String)">
       <summary>
-        <para>Make a progress bar.</para>
+        <para>Makes a progress bar.</para>
       </summary>
       <param name="totalPosition">Rectangle on the screen to use in total for both the control.</param>
       <param name="value">Value that is shown.</param>
@@ -10293,7 +10339,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.RectField(UnityEngine.Rect,UnityEngine.Rect)">
       <summary>
-        <para>Make an X, Y, W &amp; H field for entering a Rect.</para>
+        <para>Makes an X, Y, W, and H field for entering a Rect.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label to display above the field.</param>
@@ -10304,7 +10350,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.RectField(UnityEngine.Rect,System.String,UnityEngine.Rect)">
       <summary>
-        <para>Make an X, Y, W &amp; H field for entering a Rect.</para>
+        <para>Makes an X, Y, W, and H field for entering a Rect.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label to display above the field.</param>
@@ -10315,7 +10361,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.RectField(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.Rect)">
       <summary>
-        <para>Make an X, Y, W &amp; H field for entering a Rect.</para>
+        <para>Makes an X, Y, W, and H field for entering a Rect.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label to display above the field.</param>
@@ -10326,12 +10372,12 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.RectField">
       <summary>
-        <para>Make an X, Y, W &amp; H for Rect using SerializedProperty (not public).</para>
+        <para>Makes an X, Y, W, and H for Rect using SerializedProperty (not public).</para>
       </summary>
     </member>
     <member name="M:UnityEditor.EditorGUI.RectIntField(UnityEngine.Rect,UnityEngine.RectInt)">
       <summary>
-        <para>Make an X, Y, W &amp; H field for entering a RectInt.</para>
+        <para>Makes an X, Y, W, and H field for entering a RectInt.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label to display above the field.</param>
@@ -10342,7 +10388,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.RectIntField(UnityEngine.Rect,System.String,UnityEngine.RectInt)">
       <summary>
-        <para>Make an X, Y, W &amp; H field for entering a RectInt.</para>
+        <para>Makes an X, Y, W, and H field for entering a RectInt.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label to display above the field.</param>
@@ -10353,7 +10399,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.RectIntField(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.RectInt)">
       <summary>
-        <para>Make an X, Y, W &amp; H field for entering a RectInt.</para>
+        <para>Makes an X, Y, W, and H field for entering a RectInt.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label to display above the field.</param>
@@ -10364,7 +10410,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.SelectableLabel(UnityEngine.Rect,System.String)">
       <summary>
-        <para>Make a selectable label field. (Useful for showing read-only info that can be copy-pasted.)</para>
+        <para>Makes a selectable label field. (Useful for showing read-only info that can be copy-pasted.)</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the label.</param>
       <param name="text">The text to show.</param>
@@ -10372,7 +10418,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.SelectableLabel(UnityEngine.Rect,System.String,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a selectable label field. (Useful for showing read-only info that can be copy-pasted.)</para>
+        <para>Makes a selectable label field. (Useful for showing read-only info that can be copy-pasted.)</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the label.</param>
       <param name="text">The text to show.</param>
@@ -10380,7 +10426,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Slider(UnityEngine.Rect,System.Single,System.Single,System.Single)">
       <summary>
-        <para>Make a slider the user can drag to change a value between a min and a max.</para>
+        <para>Makes a slider the user can drag to change a value between a min and a max.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the slider.</param>
       <param name="label">Optional label in front of the slider.</param>
@@ -10393,7 +10439,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Slider(UnityEngine.Rect,System.String,System.Single,System.Single,System.Single)">
       <summary>
-        <para>Make a slider the user can drag to change a value between a min and a max.</para>
+        <para>Makes a slider the user can drag to change a value between a min and a max.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the slider.</param>
       <param name="label">Optional label in front of the slider.</param>
@@ -10406,7 +10452,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Slider(UnityEngine.Rect,UnityEngine.GUIContent,System.Single,System.Single,System.Single)">
       <summary>
-        <para>Make a slider the user can drag to change a value between a min and a max.</para>
+        <para>Makes a slider the user can drag to change a value between a min and a max.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the slider.</param>
       <param name="label">Optional label in front of the slider.</param>
@@ -10419,7 +10465,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Slider(UnityEngine.Rect,UnityEditor.SerializedProperty,System.Single,System.Single)">
       <summary>
-        <para>Make a slider the user can drag to change a value between a min and a max.</para>
+        <para>Makes a slider the user can drag to change a value between a min and a max.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the slider.</param>
       <param name="label">Optional label in front of the slider.</param>
@@ -10429,7 +10475,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Slider(UnityEngine.Rect,UnityEditor.SerializedProperty,System.Single,System.Single,System.String)">
       <summary>
-        <para>Make a slider the user can drag to change a value between a min and a max.</para>
+        <para>Makes a slider the user can drag to change a value between a min and a max.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the slider.</param>
       <param name="label">Optional label in front of the slider.</param>
@@ -10439,7 +10485,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Slider(UnityEngine.Rect,UnityEditor.SerializedProperty,System.Single,System.Single,UnityEngine.GUIContent)">
       <summary>
-        <para>Make a slider the user can drag to change a value between a min and a max.</para>
+        <para>Makes a slider the user can drag to change a value between a min and a max.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the slider.</param>
       <param name="label">Optional label in front of the slider.</param>
@@ -10449,7 +10495,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.TagField(UnityEngine.Rect,System.String)">
       <summary>
-        <para>Make a tag selection field.</para>
+        <para>Makes a tag selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -10461,7 +10507,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.TagField(UnityEngine.Rect,System.String,System.String)">
       <summary>
-        <para>Make a tag selection field.</para>
+        <para>Makes a tag selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -10473,7 +10519,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.TagField(UnityEngine.Rect,UnityEngine.GUIContent,System.String)">
       <summary>
-        <para>Make a tag selection field.</para>
+        <para>Makes a tag selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -10485,7 +10531,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.TagField(UnityEngine.Rect,System.String,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a tag selection field.</para>
+        <para>Makes a tag selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -10497,7 +10543,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.TagField(UnityEngine.Rect,System.String,System.String,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a tag selection field.</para>
+        <para>Makes a tag selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -10509,7 +10555,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.TagField(UnityEngine.Rect,UnityEngine.GUIContent,System.String,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a tag selection field.</para>
+        <para>Makes a tag selection field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Optional label in front of the field.</param>
@@ -10521,7 +10567,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.TextArea(UnityEngine.Rect,System.String)">
       <summary>
-        <para>Make a text area.</para>
+        <para>Makes a text area.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the text field.</param>
       <param name="text">The text to edit.</param>
@@ -10532,7 +10578,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.TextArea(UnityEngine.Rect,System.String,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a text area.</para>
+        <para>Makes a text area.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the text field.</param>
       <param name="text">The text to edit.</param>
@@ -10543,7 +10589,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.TextField(UnityEngine.Rect,System.String)">
       <summary>
-        <para>Make a text field.</para>
+        <para>Makes a text field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the text field.</param>
       <param name="label">Optional label to display in front of the text field.</param>
@@ -10555,7 +10601,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.TextField(UnityEngine.Rect,System.String,System.String)">
       <summary>
-        <para>Make a text field.</para>
+        <para>Makes a text field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the text field.</param>
       <param name="label">Optional label to display in front of the text field.</param>
@@ -10567,7 +10613,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.TextField(UnityEngine.Rect,UnityEngine.GUIContent,System.String)">
       <summary>
-        <para>Make a text field.</para>
+        <para>Makes a text field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the text field.</param>
       <param name="label">Optional label to display in front of the text field.</param>
@@ -10579,7 +10625,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.TextField(UnityEngine.Rect,System.String,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a text field.</para>
+        <para>Makes a text field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the text field.</param>
       <param name="label">Optional label to display in front of the text field.</param>
@@ -10591,7 +10637,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.TextField(UnityEngine.Rect,System.String,System.String,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a text field.</para>
+        <para>Makes a text field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the text field.</param>
       <param name="label">Optional label to display in front of the text field.</param>
@@ -10603,7 +10649,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.TextField(UnityEngine.Rect,UnityEngine.GUIContent,System.String,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a text field.</para>
+        <para>Makes a text field.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the text field.</param>
       <param name="label">Optional label to display in front of the text field.</param>
@@ -10615,7 +10661,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Toggle(UnityEngine.Rect,System.Boolean)">
       <summary>
-        <para>Make a toggle.</para>
+        <para>Makes a toggle.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the toggle.</param>
       <param name="label">Optional label in front of the toggle.</param>
@@ -10627,7 +10673,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Toggle(UnityEngine.Rect,System.String,System.Boolean)">
       <summary>
-        <para>Make a toggle.</para>
+        <para>Makes a toggle.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the toggle.</param>
       <param name="label">Optional label in front of the toggle.</param>
@@ -10639,7 +10685,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Toggle(UnityEngine.Rect,System.Boolean,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a toggle.</para>
+        <para>Makes a toggle.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the toggle.</param>
       <param name="label">Optional label in front of the toggle.</param>
@@ -10651,7 +10697,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Toggle(UnityEngine.Rect,System.String,System.Boolean,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a toggle.</para>
+        <para>Makes a toggle.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the toggle.</param>
       <param name="label">Optional label in front of the toggle.</param>
@@ -10663,7 +10709,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Toggle(UnityEngine.Rect,UnityEngine.GUIContent,System.Boolean)">
       <summary>
-        <para>Make a toggle.</para>
+        <para>Makes a toggle.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the toggle.</param>
       <param name="label">Optional label in front of the toggle.</param>
@@ -10675,7 +10721,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Toggle(UnityEngine.Rect,UnityEngine.GUIContent,System.Boolean,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a toggle.</para>
+        <para>Makes a toggle.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the toggle.</param>
       <param name="label">Optional label in front of the toggle.</param>
@@ -10687,7 +10733,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.ToggleLeft(UnityEngine.Rect,System.String,System.Boolean)">
       <summary>
-        <para>Make a toggle field where the toggle is to the left and the label immediately to the right of it.</para>
+        <para>Makes a toggle field where the toggle is to the left and the label immediately to the right of it.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the toggle.</param>
       <param name="label">Label to display next to the toggle.</param>
@@ -10699,7 +10745,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.ToggleLeft(UnityEngine.Rect,System.String,System.Boolean,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a toggle field where the toggle is to the left and the label immediately to the right of it.</para>
+        <para>Makes a toggle field where the toggle is to the left and the label immediately to the right of it.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the toggle.</param>
       <param name="label">Label to display next to the toggle.</param>
@@ -10711,7 +10757,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.ToggleLeft(UnityEngine.Rect,UnityEngine.GUIContent,System.Boolean)">
       <summary>
-        <para>Make a toggle field where the toggle is to the left and the label immediately to the right of it.</para>
+        <para>Makes a toggle field where the toggle is to the left and the label immediately to the right of it.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the toggle.</param>
       <param name="label">Label to display next to the toggle.</param>
@@ -10723,7 +10769,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.ToggleLeft(UnityEngine.Rect,UnityEngine.GUIContent,System.Boolean,UnityEngine.GUIStyle)">
       <summary>
-        <para>Make a toggle field where the toggle is to the left and the label immediately to the right of it.</para>
+        <para>Makes a toggle field where the toggle is to the left and the label immediately to the right of it.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the toggle.</param>
       <param name="label">Label to display next to the toggle.</param>
@@ -10735,7 +10781,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Vector2Field(UnityEngine.Rect,System.String,UnityEngine.Vector2)">
       <summary>
-        <para>Make an X &amp; Y field for entering a Vector2.</para>
+        <para>Makes an X and Y field for entering a Vector2.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Label to display above the field.</param>
@@ -10746,7 +10792,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Vector2Field(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.Vector2)">
       <summary>
-        <para>Make an X &amp; Y field for entering a Vector2.</para>
+        <para>Makes an X and Y field for entering a Vector2.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Label to display above the field.</param>
@@ -10757,7 +10803,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Vector2IntField(UnityEngine.Rect,System.String,UnityEngine.Vector2Int)">
       <summary>
-        <para>Make an X &amp; Y integer field for entering a Vector2Int.</para>
+        <para>Makes an X and Y integer field for entering a Vector2Int.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Label to display above the field.</param>
@@ -10768,7 +10814,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Vector2IntField(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.Vector2Int)">
       <summary>
-        <para>Make an X &amp; Y integer field for entering a Vector2Int.</para>
+        <para>Makes an X and Y integer field for entering a Vector2Int.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Label to display above the field.</param>
@@ -10779,7 +10825,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Vector3Field(UnityEngine.Rect,System.String,UnityEngine.Vector3)">
       <summary>
-        <para>Make an X, Y &amp; Z field for entering a Vector3.</para>
+        <para>Makes an X, Y, and Z field for entering a Vector3.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Label to display above the field.</param>
@@ -10790,7 +10836,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Vector3Field(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.Vector3)">
       <summary>
-        <para>Make an X, Y &amp; Z field for entering a Vector3.</para>
+        <para>Makes an X, Y, and Z field for entering a Vector3.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Label to display above the field.</param>
@@ -10801,7 +10847,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Vector3IntField(UnityEngine.Rect,System.String,UnityEngine.Vector3Int)">
       <summary>
-        <para>Make an X, Y &amp; Z integer field for entering a Vector3Int.</para>
+        <para>Makes an X, Y, and Z integer field for entering a Vector3Int.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Label to display above the field.</param>
@@ -10812,7 +10858,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Vector3IntField(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.Vector3Int)">
       <summary>
-        <para>Make an X, Y &amp; Z integer field for entering a Vector3Int.</para>
+        <para>Makes an X, Y, and Z integer field for entering a Vector3Int.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Label to display above the field.</param>
@@ -10823,7 +10869,7 @@ Make an enum popup selection field for a bitmask.</para>
     </member>
     <member name="M:UnityEditor.EditorGUI.Vector4Field(UnityEngine.Rect,System.String,UnityEngine.Vector4)">
       <summary>
-        <para>Make an X, Y, Z &amp; W field for entering a Vector4.</para>
+        <para>Makes an X, Y, Z, and W field for entering a Vector4.</para>
       </summary>
       <param name="position">Rectangle on the screen to use for the field.</param>
       <param name="label">Label to display above the field.</param>
@@ -14197,8 +14243,7 @@ GUILayout.MaxHeight, GUILayout.ExpandWidth, GUILayout.ExpandHeight.</param>
       </summary>
       <param name="label">Label to display above the field.</param>
       <param name="value">The value to edit.</param>
-      <param name="options">An optional list of layout options that specify extra layout properties. Any values passed in here will override settings defined by the style.&lt;br&gt;
-</param>
+      <param name="options">An optional list of layout options that specify extra layout properties. Any values passed in here will override settings defined by the style.&lt;br&gt;</param>
       <returns>
         <para>The value entered by the user.</para>
       </returns>
@@ -14209,8 +14254,7 @@ GUILayout.MaxHeight, GUILayout.ExpandWidth, GUILayout.ExpandHeight.</param>
       </summary>
       <param name="label">Label to display above the field.</param>
       <param name="value">The value to edit.</param>
-      <param name="options">An optional list of layout options that specify extra layout properties. Any values passed in here will override settings defined by the style.&lt;br&gt;
-</param>
+      <param name="options">An optional list of layout options that specify extra layout properties. Any values passed in here will override settings defined by the style.&lt;br&gt;</param>
       <returns>
         <para>The value entered by the user.</para>
       </returns>
@@ -22149,14 +22193,13 @@ If the Unity Editor setting "Auto-Update" is set to enabled, editing a script ou
     </member>
     <member name="M:UnityEditor.Handles.Disc(System.Int32,UnityEngine.Quaternion,UnityEngine.Vector3,UnityEngine.Vector3,System.Single,System.Boolean,System.Single)">
       <summary>
-        <para>Make a 3D disc that can be dragged with the mouse.
-Note: Use HandleUtility.GetHandleSize where you might want to have constant screen-sized handles.</para>
+        <para>Make a 3D disc that can be dragged with the mouse.</para>
       </summary>
       <param name="id">Control id of the handle.</param>
       <param name="rotation">The rotation of the disc.</param>
       <param name="position">The center of the disc.</param>
       <param name="axis">The axis to rotate around.</param>
-      <param name="size">The size of the disc in world space See Also:HandleUtility.GetHandleSize.</param>
+      <param name="size">The size of the disc in world space.</param>
       <param name="cutoffPlane">If true, only the front-facing half of the circle is draw / draggable. This is useful when you have many overlapping rotation axes (like in the default rotate tool) to avoid clutter.</param>
       <param name="snap">The grid size to snap to.</param>
       <returns>
@@ -22165,14 +22208,13 @@ Note: Use HandleUtility.GetHandleSize where you might want to have constant scre
     </member>
     <member name="M:UnityEditor.Handles.Disc(UnityEngine.Quaternion,UnityEngine.Vector3,UnityEngine.Vector3,System.Single,System.Boolean,System.Single)">
       <summary>
-        <para>Make a 3D disc that can be dragged with the mouse.
-Note: Use HandleUtility.GetHandleSize where you might want to have constant screen-sized handles.</para>
+        <para>Make a 3D disc that can be dragged with the mouse.</para>
       </summary>
       <param name="id">Control id of the handle.</param>
       <param name="rotation">The rotation of the disc.</param>
       <param name="position">The center of the disc.</param>
       <param name="axis">The axis to rotate around.</param>
-      <param name="size">The size of the disc in world space See Also:HandleUtility.GetHandleSize.</param>
+      <param name="size">The size of the disc in world space.</param>
       <param name="cutoffPlane">If true, only the front-facing half of the circle is draw / draggable. This is useful when you have many overlapping rotation axes (like in the default rotate tool) to avoid clutter.</param>
       <param name="snap">The grid size to snap to.</param>
       <returns>
@@ -22199,8 +22241,8 @@ Note: Use HandleUtility.GetHandleSize where you might want to have constant scre
       <summary>
         <para>Draw anti-aliased line specified with point array and width.</para>
       </summary>
-      <param name="lineTex">The AA texture used for rendering. To get an anti-aliased effect use a texture that is 1x2 pixels with one transparent white pixel and one opaque white pixel.</param>
-      <param name="width">The width of the line. Note: Use HandleUtility.GetHandleSize where you might want to have constant screen-sized handles.</param>
+      <param name="lineTex">The AA texture used for rendering.</param>
+      <param name="width">The width of the line.</param>
       <param name="points">List of points to build the line from.</param>
       <param name="actualNumberOfPoints"></param>
     </member>
@@ -22208,8 +22250,8 @@ Note: Use HandleUtility.GetHandleSize where you might want to have constant scre
       <summary>
         <para>Draw anti-aliased line specified with point array and width.</para>
       </summary>
-      <param name="lineTex">The AA texture used for rendering. To get an anti-aliased effect use a texture that is 1x2 pixels with one transparent white pixel and one opaque white pixel.</param>
-      <param name="width">The width of the line. Note: Use HandleUtility.GetHandleSize where you might want to have constant screen-sized handles.</param>
+      <param name="lineTex">The AA texture used for rendering.</param>
+      <param name="width">The width of the line.</param>
       <param name="points">List of points to build the line from.</param>
       <param name="actualNumberOfPoints"></param>
     </member>
@@ -22217,8 +22259,8 @@ Note: Use HandleUtility.GetHandleSize where you might want to have constant scre
       <summary>
         <para>Draw anti-aliased line specified with point array and width.</para>
       </summary>
-      <param name="lineTex">The AA texture used for rendering. To get an anti-aliased effect use a texture that is 1x2 pixels with one transparent white pixel and one opaque white pixel.</param>
-      <param name="width">The width of the line. Note: Use HandleUtility.GetHandleSize where you might want to have constant screen-sized handles.</param>
+      <param name="lineTex">The AA texture used for rendering.</param>
+      <param name="width">The width of the line.</param>
       <param name="points">List of points to build the line from.</param>
       <param name="actualNumberOfPoints"></param>
     </member>
@@ -22226,8 +22268,8 @@ Note: Use HandleUtility.GetHandleSize where you might want to have constant scre
       <summary>
         <para>Draw anti-aliased line specified with point array and width.</para>
       </summary>
-      <param name="lineTex">The AA texture used for rendering. To get an anti-aliased effect use a texture that is 1x2 pixels with one transparent white pixel and one opaque white pixel.</param>
-      <param name="width">The width of the line. Note: Use HandleUtility.GetHandleSize where you might want to have constant screen-sized handles.</param>
+      <param name="lineTex">The AA texture used for rendering.</param>
+      <param name="width">The width of the line.</param>
       <param name="points">List of points to build the line from.</param>
       <param name="actualNumberOfPoints"></param>
     </member>
@@ -22235,14 +22277,14 @@ Note: Use HandleUtility.GetHandleSize where you might want to have constant scre
       <summary>
         <para>Draw anti-aliased line specified with point array and width.</para>
       </summary>
-      <param name="lineTex">The AA texture used for rendering. To get an anti-aliased effect use a texture that is 1x2 pixels with one transparent white pixel and one opaque white pixel.</param>
-      <param name="width">The width of the line. Note: Use HandleUtility.GetHandleSize where you might want to have constant screen-sized handles.</param>
+      <param name="lineTex">The AA texture used for rendering.</param>
+      <param name="width">The width of the line.</param>
       <param name="points">List of points to build the line from.</param>
       <param name="actualNumberOfPoints"></param>
     </member>
     <member name="M:UnityEditor.Handles.DrawBezier(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color,UnityEngine.Texture2D,System.Single)">
       <summary>
-        <para>Draw textured bezier line through start and end points with the given tangents.  To get an anti-aliased effect use a texture that is 1x2 pixels with one transparent white pixel and one opaque white pixel.  The bezier curve will be swept using this texture.</para>
+        <para>Draw textured bezier line through start and end points with the given tangents.</para>
       </summary>
       <param name="startPosition">The start point of the bezier line.</param>
       <param name="endPosition">The end point of the bezier line.</param>
@@ -22363,7 +22405,7 @@ Note: Use HandleUtility.GetHandleSize where you might want to have constant scre
     </member>
     <member name="M:UnityEditor.Handles.DrawPolyLine(UnityEngine.Vector3[])">
       <summary>
-        <para>Draw a line going through the list of all points.</para>
+        <para>Draw a line going through the list of points.</para>
       </summary>
       <param name="points"></param>
     </member>
@@ -22574,7 +22616,7 @@ Note: Use HandleUtility.GetHandleSize where you might want to have constant scre
     </member>
     <member name="M:UnityEditor.Handles.MakeBezierPoints(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3,System.Int32)">
       <summary>
-        <para>Retuns an array of points to representing the bezier curve. See Handles.DrawBezier.</para>
+        <para>Retuns an array of points to representing the bezier curve.</para>
       </summary>
       <param name="startPosition"></param>
       <param name="endPosition"></param>
@@ -22642,9 +22684,7 @@ Note: Use HandleUtility.GetHandleSize where you might want to have constant scre
     </member>
     <member name="M:UnityEditor.Handles.ScaleHandle(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Quaternion,System.Single)">
       <summary>
-        <para>Make a Scene view scale handle.
-
-Note: Use HandleUtility.GetHandleSize where you might want to have constant screen-sized handles.</para>
+        <para>Make a Scene view scale handle.</para>
       </summary>
       <param name="scale">Scale to modify.</param>
       <param name="position">The position of the handle.</param>
@@ -26012,7 +26052,7 @@ GUILayout.MaxHeight, GUILayout.ExpandWidth, GUILayout.ExpandHeight.</param>
     </member>
     <member name="P:UnityEditor.LightmapEditorSettings.lightmapsMode">
       <summary>
-        <para>Non-directional, Directional or Directional Specular lightmaps rendering mode.</para>
+        <para>NonDirectional or CombinedDirectional lightmaps rendering mode.</para>
       </summary>
     </member>
     <member name="P:UnityEditor.LightmapEditorSettings.maxAtlasHeight">
@@ -26107,7 +26147,7 @@ GUILayout.MaxHeight, GUILayout.ExpandWidth, GUILayout.ExpandHeight.</param>
     </member>
     <member name="T:UnityEditor.LightmapEditorSettings.Lightmapper">
       <summary>
-        <para>Backends available for baking lightmaps.</para>
+        <para>Backends available for baking lighting.</para>
       </summary>
     </member>
     <member name="F:UnityEditor.LightmapEditorSettings.Lightmapper.Enlighten">
@@ -29086,7 +29126,7 @@ If the target name is in the provided list of existing names, a unique name is g
       <summary>
         <para>Lists the packages the project depends on.</para>
       </summary>
-      <param name="offlineMode">Specifies whether or not the Package Manager requests the latest information about the project's packages from the remote Unity package registry. When offlineMode is true, the PackageInfo objects in the PackageCollection returned by the Package Manager contain information obtained from the local package cache, which could be out of date.</param>
+      <param name="offlineMode">Specifies whether or not the Package Manager requests the latest information about the project's packages from the remote Unity package registry. When offlineMode is true, the PackageManager.PackageInfo objects in the PackageCollection returned by the Package Manager contain information obtained from the local package cache, which could be out of date.</param>
       <returns>
         <para>A ListRequest instance, which you can use to monitor the asynchronous operation, and when complete, get the result.</para>
       </returns>
@@ -30247,7 +30287,7 @@ See Also: PhysicsVisualizationSettings.</para>
     </member>
     <member name="P:UnityEditor.PlayerSettings.strippingLevel">
       <summary>
-        <para>Managed code stripping level.</para>
+        <para>Deprecated. Use PlayerSettings.GetManagedStrippingLevel and PlayerSettings.SetManagedStrippingLevel instead.</para>
       </summary>
     </member>
     <member name="P:UnityEditor.PlayerSettings.stripUnusedMeshComponents">
@@ -34052,12 +34092,12 @@ See Also:</para>
     </member>
     <member name="P:UnityEditor.Selection.activeInstanceID">
       <summary>
-        <para>Returns the instanceID of the actual object selection. Includes prefabs, non-modifyable objects.</para>
+        <para>Returns the instanceID of the actual object selection. Includes prefabs, non-modifiable objects.</para>
       </summary>
     </member>
     <member name="P:UnityEditor.Selection.activeObject">
       <summary>
-        <para>Returns the actual object selection. Includes prefabs, non-modifyable objects.</para>
+        <para>Returns the actual object selection. Includes prefabs, non-modifiable objects.</para>
       </summary>
     </member>
     <member name="P:UnityEditor.Selection.activeTransform">
@@ -34072,7 +34112,7 @@ See Also:</para>
     </member>
     <member name="P:UnityEditor.Selection.gameObjects">
       <summary>
-        <para>Returns the actual game object selection. Includes prefabs, non-modifyable objects.</para>
+        <para>Returns the actual game object selection. Includes prefabs, non-modifiable objects.</para>
       </summary>
     </member>
     <member name="P:UnityEditor.Selection.instanceIDs">
