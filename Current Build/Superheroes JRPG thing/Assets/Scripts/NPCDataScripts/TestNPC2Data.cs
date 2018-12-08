@@ -54,10 +54,10 @@ public class TestNPC2Data : MonoBehaviour {
             DialogueNode node4 = new DialogueNode("Aww...", -1, -1, 4);
 
             dialogue.AddNode(node0);
-            dialogue.AddNode(node1);
-            dialogue.AddNode(node3);
-            dialogue.AddNode(node3);
-            dialogue.AddNode(node4);
+           // dialogue.AddNode(node1);
+           // dialogue.AddNode(node3);
+           // dialogue.AddNode(node3);
+          //  dialogue.AddNode(node4);
 
             dialogue.AddOption("No, I don't.", node0, node2);
             dialogue.AddOption("Yes, I do.", node0, node1);

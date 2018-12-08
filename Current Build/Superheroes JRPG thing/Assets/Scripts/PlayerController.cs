@@ -101,6 +101,7 @@ public class PlayerController : MonoBehaviour {
 
         // Sets the players scale depending on how close to the top the player is.
         transform.localScale = new Vector2(playerPos/topPos * modifier + defaultScale, playerPos / topPos * modifier + defaultScale);
+        ///note for matt: just expose some shit and figure out what this is doing...
     }
 
     void FixedUpdate()

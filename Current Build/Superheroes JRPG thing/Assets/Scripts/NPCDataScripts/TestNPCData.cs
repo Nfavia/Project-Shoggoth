@@ -74,10 +74,10 @@ public class TestNPCData : MonoBehaviour {
             DialogueNode node3 = new DialogueNode("Hope you have a nice day!", -1, 1, 3);
 
             dialogue.AddNode(node0);
-            dialogue.AddNode(node1);
-            dialogue.AddNode(node3);
-            dialogue.AddNode(node3);
-
+           // dialogue.AddNode(node1);
+            //dialogue.AddNode(node3);
+         //   dialogue.AddNode(node3);
+      
             dialogue.AddOption("I'm doing good!", node0, node1);
             dialogue.AddOption("I'm horrible...", node0, node2);
 

@@ -65,7 +65,6 @@
     <Compile Include="Assets\Scripts\CanvasScript.cs" />
     <Compile Include="Assets\Scripts\CombatInitiatorScript.cs" />
     <Compile Include="Assets\Scripts\CombatManagerScript.cs" />
-    <Compile Include="Assets\Scripts\DebugExitBtn.cs" />
     <Compile Include="Assets\Scripts\DialogueScripts\Dialogue.cs" />
     <Compile Include="Assets\Scripts\DialogueScripts\DialogueManagerScript.cs" />
     <Compile Include="Assets\Scripts\DialogueScripts\DialogueNode.cs" />

@@ -26,11 +26,12 @@ public class UIManagerScript : MonoBehaviour {
 
     public void CreateTalkIcon()
     {
+       
         Image talkImgTemp = (Image)Instantiate(talkImg, theCanvas.transform);
         talkImgTemp.transform.SetParent(theCanvas.transform);
         talkImgTemp.name = "temp";
-
         talkImgTemp.transform.SetPositionAndRotation(new Vector3(theCanvas.transform.position.x - 8.2f, theCanvas.transform.position.y - 4.5f, 0), new Quaternion(0, 180, 0, 0));
+
     }
 
     public void DestroyTalkIcon()
